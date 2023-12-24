@@ -1,0 +1,190 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="DRN_WEB_ERP.Site" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>DOREEN</title>
+    <link rel="shortcut icon" href="Image/drn_grp.ico" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="Styles/StyleSheet.css" />
+</head>
+<body>
+    <div id="wrapper">
+        <form id="Form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="updheader" runat="server">
+            <ContentTemplate>
+                <div id="header">
+                    <%--<span class="title">
+                        <asp:Image ID="Image2" runat="server" ImageUrl="~/Image/DoreenLogo.png" />
+                    </span>--%>
+                    <span class="breadcrumb">
+                        <asp:LinkButton ID="lnkCngPass" runat="server" Font-Bold="True" ForeColor="White"
+                            Text="Change Password" OnClick="lnkCngPass_Click"></asp:LinkButton>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="lnkUserName" runat="server" Font-Bold="True" ForeColor="White"
+                            Text=""></asp:LinkButton>
+                        &nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton ID="lnkLogOut" runat="server" Font-Bold="True" OnClientClick="return confirm('Are you sure you Log Out ?');"
+                            ForeColor="White" OnClick="lnkLogOut_Click">Log Out</asp:LinkButton>
+                    </span><span class="title">DOREEN</span>
+                </div>
+                <div id="content">
+                    <blockquote id="blquote" runat="server" style="height: auto; min-height: 543px;">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </blockquote>
+                </div>
+                <div id="navigation" runat="server">
+                    <ul>
+                        <li style="font-weight: bold">
+                            <asp:HyperLink runat="server" ID="lnkHome" NavigateUrl="~/Default.aspx">HOME</asp:HyperLink>
+                        </li>
+                        <asp:Repeater runat="server" ID="rptrModule" OnItemDataBound="rptrModule_ItemDataBound">
+                            <ItemTemplate>
+                                <li style="font-weight: bold">
+                                    <%--<a href="~/Default.aspx">
+                                    <%#DataBinder.Eval(Container, "DataItem.Module_Name")%>
+                                </a>--%>
+                                    <asp:HiddenField ID="hfModId" runat="server" Value='<%#DataBinder.Eval(Container,"DataItem.Module_Ref") %>' />
+                                    <asp:HyperLink runat="server" ID="lnkMod" NavigateUrl="~/Default.aspx"><%#DataBinder.Eval(Container, "DataItem.Module_Name")%></asp:HyperLink>
+                                    <ul style="font-weight: normal">
+                                        <asp:Repeater ID="rptrNode" runat="server">
+                                            <ItemTemplate>
+                                                <li style="font-size: 12px;">
+                                                    <%--<a href='<%#DataBinder.Eval(Container,"DataItem.Node_Form_Url")%>'>
+                                                    <%#DataBinder.Eval(Container, "DataItem.Node_Name")%>
+                                                </a>--%>
+                                                    <asp:HyperLink runat="server" ID="lnkNod" NavigateUrl='<%#DataBinder.Eval(Container,"DataItem.Node_Form_Url")%>'> <%#DataBinder.Eval(Container, "DataItem.Node_Name")%> </asp:HyperLink>
+                                                </li>
+                                            </ItemTemplate>
+                                            <FooterTemplate>
+                                                <%--<asp:Label ID="lblNodeFooter" runat="server" Text="No Node Permission Found." 
+                                                Visible='<%# (rptrNode.Items.Count) == 0 ? true : false %>'></asp:Label>--%>
+                                            </FooterTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+                                </li>
+                            </ItemTemplate>
+                            <FooterTemplate>
+                                <asp:Label ID="lblModFooter" runat="server" Text="No Module Permission Found." Visible='<%# (rptrModule.Items.Count) == 0 ? true : false %>'></asp:Label>
+                            </FooterTemplate>
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <asp:Panel ID="pnlCngPass" runat="server" Style="border-right: black 2px solid; padding-right: 20px;
+                    display: none; border-top: black 2px solid; padding-left: 20px; padding-bottom: 20px;
+                    border-left: black 2px solid; padding-top: 20px; border-bottom: black 2px solid;
+                    background-color: #E1FBF1" ForeColor="Blue" Width="300px" Font-Size="Small">
+                    <br />
+                    <table id="tblCngPass" runat="server" style="width: 300px">
+                        <tr>
+                            <td>
+                                Old Password
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtOldPass" runat="server" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                New Password
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtNewPass" runat="server" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Conf. Password
+                            </td>
+                            <td>
+                                :
+                            </td>
+                            <td>
+                                <asp:TextBox ID="txtConfPass" runat="server" TextMode="Password"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" colspan="3">
+                                <asp:Label ID="lblCngPassMsg" runat="server" ForeColor="Red"></asp:Label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <br />
+                    <div align="center" style="width: 300px">
+                        <asp:Button ID="btnOk" runat="server" Text="OK" Width="80px" OnClick="btnOk_Click" />
+                        <asp:Button ID="btnCancel" runat="server" Text="Cancel" Width="80px" />
+                    </div>
+                </asp:Panel>
+                <asp:HiddenField ID="hfHiddenBtn" runat="server" />
+                <cc1:ModalPopupExtender ID="ModalPopupExtenderCngPass" runat="server" BackgroundCssClass="modalBackground"
+                    CancelControlID="btnCancel" OkControlID="btnCancel" PopupControlID="pnlCngPass"
+                    TargetControlID="hfHiddenBtn" DropShadow="true">
+                </cc1:ModalPopupExtender>
+                <asp:Panel ID="pnlMsg" runat="server" Style="border-right: black 2px solid; padding-right: 20px;
+                    display: none; border-top: black 2px solid; padding-left: 20px; padding-bottom: 20px;
+                    border-left: black 2px solid; padding-top: 20px; border-bottom: black 2px solid;
+                    background-color: #E1FBF1" ForeColor="Blue" Width="300px" Font-Size="Small">
+                    <table id="tblMsg" runat="server" style="width: 100%;">
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <br />
+                    <div align="center">
+                        <asp:Button ID="btnMsgOk" runat="server" Text="OK" Width="80px" />
+                    </div>
+                </asp:Panel>
+                <asp:HiddenField ID="hfHidden" runat="server" />
+                <cc1:ModalPopupExtender ID="ModalPopupExtenderMsg" runat="server" BackgroundCssClass="modalBackground"
+                    CancelControlID="btnMsgOk" OkControlID="btnMsgOk" PopupControlID="pnlMsg" TargetControlID="hfHidden"
+                    DropShadow="true">
+                </cc1:ModalPopupExtender>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <asp:UpdateProgress ID="updProgress" AssociatedUpdatePanelID="updheader" DisplayAfter="0"
+            runat="server">
+            <ProgressTemplate>
+                <div class="overlay" />
+                <div class="overlayContent">
+                    <h2>
+                        Loading, Please wait...</h2>
+                    &nbsp;<img src="~/Image/ajax-loader-circle-black.gif" alt="Loading" border="1" style="background-color: #FFFFFF" /></div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        </form>
+    </div>
+    <div id="footer">
+        Copyright ©2015, All rights reserved By Doreen.
+        <asp:HyperLink ID="PoweredBy" runat="server" ForeColor="Black" NavigateUrl="http://www.doreen.com"
+            onclick="window.open(this.href,'popupwindow','width=400,height=400,titlebar=yes,toolbar=yes,scrollbars,resizable'); return false;"
+            ToolTip="Visit our portal website">Powered By Doreen.</asp:HyperLink>
+    </div>
+</body>
+</html>

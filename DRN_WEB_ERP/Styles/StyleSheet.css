@@ -1,0 +1,480 @@
+﻿/* 
+   The below CSS file was built using samples + techniques described by Rachel Andrew in her book:
+   The CSS Anthology: 101 Essential Tips, Tricks & Hacks
+*/
+
+/* Overall Page */
+body
+{
+    margin: 0;
+    padding-bottom: 0em; /*background-color: #FFFFFF;*/
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    border-top: 2px solid #008C8C;
+    border-top-color: #00FF99;
+}
+
+/* Header Section */
+#header
+{
+    border-top: 3px solid #008C8C;
+    border-bottom: 1px dotted #008C8C;
+    height: 3em;
+    background-color: #23DC3A;
+    border-top-color: #23DC3A;
+    border-bottom-color: #23DC3A;
+}
+#header .title {
+	font: 190% Arial, Helvetica, Georgia, "Times New Roman", Times, serif;
+	color: White;
+	background-color: transparent;
+	float: left;
+	margin-right: 2em;
+	margin-top: 0.3em;
+	margin-left: .8em;
+}
+#header .breadcrumb {
+	font: 90% Arial, Helvetica, Georgia, "Times New Roman", Times, serif;
+	color: #black;
+	background-color: transparent;
+	float: right;
+	margin-right: 2em;
+	margin-top: 0.8em;
+	font-weight:bold;
+}
+#header a:link, a:visited  {
+	color: #008C8C;
+}
+
+/* Footer */
+#footer
+{
+    /*position: absolute;*/
+    position: relative;
+    width: 100%;
+    height: 1.5em;
+    background-color: #23DC3A;
+    color: #FFFFFF;
+    border-top: #778899;
+    text-align: center;
+}
+#footer a:link, #footer a:visited
+{
+    padding: 0.8em 1em 0.5em 1em;
+    color: #FFFFFF;
+    background-color: transparent;
+    font-size: 80%;
+}
+
+
+/* Navigation */
+#navigation
+{
+    width: 200px;
+    border-style: outset; /*top: 5em;*/
+    top: 4em; /*left: 1em;*/
+    left: 0em;
+    width: 13em;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    height: 86%;
+    background-color: #23DC3A;
+    overflow: auto;
+}
+#navigation ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+#navigation li
+{
+    border-bottom: 1px solid #ED9F9F;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-color: #ED9F9F;
+    border-bottom-color: #ED9F9F;
+}
+#navigation li a:link, #navigation li a:visited
+{
+    display: block;
+    padding: 5px 5px 5px 0.5em;
+    border-left: 12px solid #711515;
+    border-right: 1px solid #711515;
+    background-color: #00FF99;
+    color: #000080;
+    text-decoration: none;
+    /*font-weight: bold;*/
+}
+#navigation li a:hover {
+	background-color: #711515;
+	color: #FFFFFF;	
+}
+#navigation ul ul {
+	margin-left: 12px;
+}
+#navigation ul ul li {
+	border-bottom: 1px solid #711515;
+	margin:0;
+}
+#navigation ul ul a:link, #navigation ul ul a:visited
+{
+    /*background-color: #ED9F9F;*/
+    color: #711515;
+    background-color: #00FF99;
+}
+#navigation ul ul a:hover {
+	background-color: #711515;
+	color: #FFFFFF;	
+}
+
+/* Main Content */
+#content 
+{
+	margin-top:1em;
+	margin-left: 11em;
+	margin-right: 0em;
+	width:auto;
+}
+h1 {
+	font: 150% Arial, Helvetica, Georgia, "Times New Roman", Times, serif;
+}
+#content p {
+	font-size: 80%;
+	line-height: 1.6em; 
+}
+
+
+/* auto complete*/
+.autocomplete_completionListElement
+{
+    margin: 0px !important; /*background-color: inherit;*/
+    background-color: window;
+    color: windowtext;
+    border: buttonshadow;
+    border-width: 1px;
+    border-style: solid;
+    cursor: 'default';
+    overflow: auto;
+    height: 200px;
+    text-align: left;
+    list-style-type: none;
+    padding-left: 1px;
+    width: auto;
+    white-space: nowrap;
+    font-size: 12px;
+}
+        
+/* AutoComplete highlighted item */      
+.autocomplete_highlightedListItem
+{
+    background-color: #aaff90;
+    color: black;
+    padding: 1px;
+    cursor: default;
+    white-space: nowrap;
+    font-size: 12px;
+}
+        
+/* AutoComplete item */        
+.autocomplete_listItem
+{
+    background-color: window;
+    color: windowtext;
+    padding: 2px;
+    white-space: nowrap;
+    border-bottom: dotted 1px #006699;
+    font-size: 12px;
+}
+
+
+/*-------------added later*/
+/* FORM ELEMENTS   
+----------------------------------------------------------*/
+
+fieldset
+{
+    /*margin: 1em 0px;*/
+    /*padding: 1em;*/
+    padding: 1px;
+    border: 1px solid #ccc;
+    width: 1055px;
+}
+
+fieldset p 
+{
+    margin: 2px 12px 10px 10px;
+}
+
+fieldset.login label, fieldset.register label, fieldset.changePassword label
+{
+    display: block;
+}
+
+fieldset label.inline 
+{
+    display: inline;
+}
+
+legend 
+{
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 2px 4px 8px 4px;
+    height: 7px;
+}
+
+input.textEntry 
+{
+    width: 220px;
+    border: 1px solid #ccc;
+}
+
+input.passwordEntry 
+{
+    width: 220px;
+    border: 1px solid #ccc;
+}
+
+div.accountInfo
+{  
+    left:80px;
+    width:auto;
+    position: relative;
+}
+
+/* MISC  
+----------------------------------------------------------*/
+
+.clear
+{
+    clear: both;
+}
+
+.title
+{
+    display: block;
+    float: left;
+    text-align: left;
+    width: 275px;
+}
+
+.loginDisplay
+{
+    font-size: 1.1em;
+    display: block;
+    text-align: right;
+    padding: 10px;
+    color: White;
+}
+
+.loginFrame
+{
+    border-style: outset;
+    left: 35%;
+    position: absolute;
+    background-color: #00FF99;
+    top: 103px;
+    width: 450px;
+}
+    
+.loginDisplay a:link
+{
+    color: white;
+}
+
+.loginDisplay a:visited
+{
+    color: white;
+}
+
+.loginDisplay a:hover
+{
+    color: white;
+}
+
+.failureNotification
+{
+    font-size: medium;
+    color: #CC0000;
+}
+
+.bold
+{
+    font-weight: bold;
+}
+
+.submitButton
+{
+    text-align: right;
+    padding-right: 10px;
+}
+
+/*--Water Mark Font*/
+.WaterMarkFont
+{
+    color:Gray;
+}
+
+/* Text align */
+.textAlignCenter
+{
+    text-align: center;
+    margin-top: 0px;
+}
+.textAlignRight
+{
+    text-align: right;
+}
+.textAlignCurrency
+{
+    text-align: right;
+    font-weight: bold;
+}
+
+/*--UpdateProgress--*/
+.overlay
+{
+    display: inline;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: wait;
+    background-color: #aaa;
+    z-index: 50;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    -ms-filter: "alpha (opacity=80)";
+}
+.overlayContent
+{
+    z-index: 99;
+    margin: 250px auto;
+    width: 200px;
+    height: 80px;
+}
+.overlayContent h2
+{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.overlayContent img
+{
+    margin: auto auto auto 50px;
+    width: 80px;
+    height: 80px;
+}
+
+
+/*-Search Textbox-*/
+.search
+{
+    background: url('../Image/find.png') no-repeat;
+    padding-left: 18px;
+    border: 1px solid #ccc;
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.transparent
+{
+    background-color:transparent;
+}
+.etc
+{
+    font-size: 13px; 
+    border: 1px solid rgb(210, 209, 209); 
+    color: rgb(93, 93, 93); 
+    border-top-left-radius: 3px; 
+    border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px; 
+    border-bottom-left-radius: 3px; 
+    outline: none; 
+    padding: 4px 6px; 
+    float: left; 
+    /*background-color: rgb(51, 172, 63);*/
+}
+
+.btn
+{
+    border-style: outset;
+    font-size: 15px;
+    color: rgb(255, 255, 255); /*border-top-left-radius: 3px; 
+    /border-top-right-radius: 3px; 
+    border-bottom-right-radius: 3px; 
+    border-bottom-left-radius: 3px; */
+    outline: none;
+    padding: 8px 20px;
+    margin-right: 4px;
+    background: rgb(51, 172, 63);
+}
+
+.btn:hover
+{
+    border-style: outset;
+    background: rgb(91, 206, 103);
+    /*border: solid 1px grey;*/
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); 
+    /*height: 25px;*/
+}
+.cpHeader
+{
+    color: white;
+    background-color: #339966;
+    font: bold 11px auto "Trebuchet MS" , Verdana;
+    font-size: 12px;
+    cursor: pointer;
+    width: 450px;
+    height: 18px;
+    padding: 4px;
+}
+.cpBody
+{
+    background-color: #DCE4F9;
+    font: normal 12px auto Verdana, Arial;
+    border: 1px gray;
+    padding-top: 2px;
+    overflow: hidden;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+}
+.uppercase {
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: lowercase;
+}
+
+.capitalize {
+    text-transform: capitalize;
+}
+.titleframe
+{
+    background-color: #99CCFF;
+}
+.mainframe
+{
+    /*background-color: #E6E6FF;*/
+    background-color: #CCFFFF;
+}
+.searchframe
+{
+    background-color: #CCFFFF;
+}
+.htmltable
+{
+    font-weight: bold;
+    font-size: 12px;
+    background-color: #F3EBDA;
+    border-collapse:collapse;
+}    

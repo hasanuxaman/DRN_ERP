@@ -1,0 +1,747 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DRNDataSet" targetNamespace="http://tempuri.org/DRNDataSet.xsd" xmlns:mstns="http://tempuri.org/DRNDataSet.xsd" xmlns="http://tempuri.org/DRNDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="DRNConStr" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="DRNConStr (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.DRNConStr.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Emp_Attnd_SumTableAdapter" GeneratorDataComponentClassName="View_Emp_Attnd_SumTableAdapter" Name="View_Emp_Attnd_Sum" UserDataComponentName="View_Emp_Attnd_SumTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd_Sum" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmpRefNo, EmpId, EmpName, TotDays, WrkDays, PrsDays, LvDays, HolDay, AbsDay, LateDays, LateMin, LatePerc, EarlyDays, EarlyMin, EarlyPerc, OffLocRefNo, 
+                         LocCode, LocName, DeptRefNo, DeptCode, DeptName, SecRefNo, SecCode, SecName, DesigRefNo, DesigCode, DesigName, ShiftRefNo, ShiftCode, ShiftName
+FROM            View_Emp_Attnd_Sum</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EmpRefNo" DataSetColumn="EmpRefNo" />
+              <Mapping SourceColumn="EmpId" DataSetColumn="EmpId" />
+              <Mapping SourceColumn="EmpName" DataSetColumn="EmpName" />
+              <Mapping SourceColumn="TotDays" DataSetColumn="TotDays" />
+              <Mapping SourceColumn="WrkDays" DataSetColumn="WrkDays" />
+              <Mapping SourceColumn="PrsDays" DataSetColumn="PrsDays" />
+              <Mapping SourceColumn="LvDays" DataSetColumn="LvDays" />
+              <Mapping SourceColumn="HolDay" DataSetColumn="HolDay" />
+              <Mapping SourceColumn="AbsDay" DataSetColumn="AbsDay" />
+              <Mapping SourceColumn="LateDays" DataSetColumn="LateDays" />
+              <Mapping SourceColumn="LateMin" DataSetColumn="LateMin" />
+              <Mapping SourceColumn="LatePerc" DataSetColumn="LatePerc" />
+              <Mapping SourceColumn="EarlyDays" DataSetColumn="EarlyDays" />
+              <Mapping SourceColumn="EarlyMin" DataSetColumn="EarlyMin" />
+              <Mapping SourceColumn="EarlyPerc" DataSetColumn="EarlyPerc" />
+              <Mapping SourceColumn="OffLocRefNo" DataSetColumn="OffLocRefNo" />
+              <Mapping SourceColumn="LocCode" DataSetColumn="LocCode" />
+              <Mapping SourceColumn="LocName" DataSetColumn="LocName" />
+              <Mapping SourceColumn="DeptRefNo" DataSetColumn="DeptRefNo" />
+              <Mapping SourceColumn="DeptCode" DataSetColumn="DeptCode" />
+              <Mapping SourceColumn="DeptName" DataSetColumn="DeptName" />
+              <Mapping SourceColumn="SecRefNo" DataSetColumn="SecRefNo" />
+              <Mapping SourceColumn="SecCode" DataSetColumn="SecCode" />
+              <Mapping SourceColumn="SecName" DataSetColumn="SecName" />
+              <Mapping SourceColumn="DesigRefNo" DataSetColumn="DesigRefNo" />
+              <Mapping SourceColumn="DesigCode" DataSetColumn="DesigCode" />
+              <Mapping SourceColumn="DesigName" DataSetColumn="DesigName" />
+              <Mapping SourceColumn="ShiftRefNo" DataSetColumn="ShiftRefNo" />
+              <Mapping SourceColumn="ShiftCode" DataSetColumn="ShiftCode" />
+              <Mapping SourceColumn="ShiftName" DataSetColumn="ShiftName" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd_Sum" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocDept" GeneratorSourceName="FillBy" GetMethodModifier="Public" GetMethodName="GetDataByLocDept" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocDept" UserSourceName="GetDataByLocDept">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmpRefNo, EmpId, EmpName, TotDays, WrkDays, PrsDays, LvDays, HolDay, AbsDay, LateDays, LateMin, LatePerc, EarlyDays, EarlyMin, EarlyPerc, OffLocRefNo, 
+                         LocCode, LocName, DeptRefNo, DeptCode, DeptName, SecRefNo, SecCode, SecName, DesigRefNo, DesigCode, DesigName, ShiftRefNo, ShiftCode, ShiftName
+FROM            View_Emp_Attnd_Sum
+WHERE        (OffLocRefNo = @OffLocRefNo) AND (DeptRefNo = @DeptRefNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OffLocRefNo" ColumnName="OffLocRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@OffLocRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="OffLocRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DeptRefNo" ColumnName="DeptRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@DeptRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="DeptRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd_Sum" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocDeptSec" GeneratorSourceName="FillBy1" GetMethodModifier="Public" GetMethodName="GetDataByLocDeptSec" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocDeptSec" UserSourceName="GetDataByLocDeptSec">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmpRefNo, EmpId, EmpName, TotDays, WrkDays, PrsDays, LvDays, HolDay, AbsDay, LateDays, LateMin, LatePerc, EarlyDays, EarlyMin, EarlyPerc, OffLocRefNo, 
+                         LocCode, LocName, DeptRefNo, DeptCode, DeptName, SecRefNo, SecCode, SecName, DesigRefNo, DesigCode, DesigName, ShiftRefNo, ShiftCode, ShiftName
+FROM            View_Emp_Attnd_Sum
+WHERE        (OffLocRefNo = @OffLocRefNo) AND (DeptRefNo = @DeptRefNo) AND (SecRefNo = @SecRefNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OffLocRefNo" ColumnName="OffLocRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@OffLocRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="OffLocRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DeptRefNo" ColumnName="DeptRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@DeptRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="DeptRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SecRefNo" ColumnName="SecRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@SecRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="SecRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd_Sum" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocDeptSecShift" GeneratorSourceName="FillBy2" GetMethodModifier="Public" GetMethodName="GetDataByLocDeptSecShift" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocDeptSecShift" UserSourceName="GetDataByLocDeptSecShift">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmpRefNo, EmpId, EmpName, TotDays, WrkDays, PrsDays, LvDays, HolDay, AbsDay, LateDays, LateMin, LatePerc, EarlyDays, EarlyMin, EarlyPerc, OffLocRefNo, 
+                         LocCode, LocName, DeptRefNo, DeptCode, DeptName, SecRefNo, SecCode, SecName, DesigRefNo, DesigCode, DesigName, ShiftRefNo, ShiftCode, ShiftName
+FROM            View_Emp_Attnd_Sum
+WHERE        (OffLocRefNo = @OffLocRefNo) AND (DeptRefNo = @DeptRefNo) AND (SecRefNo = @SecRefNo) AND (ShiftRefNo = @ShiftRefNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OffLocRefNo" ColumnName="OffLocRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@OffLocRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="OffLocRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DeptRefNo" ColumnName="DeptRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@DeptRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="DeptRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SecRefNo" ColumnName="SecRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@SecRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="SecRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ShiftRefNo" ColumnName="ShiftRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@ShiftRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="ShiftRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd_Sum" DbObjectType="View" GenerateMethods="Get" GenerateShortCommands="true" GeneratorGetMethodName="GetDataByLocRef" GeneratorSourceName="FillBy3" GetMethodModifier="Public" GetMethodName="GetDataByLocRef" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataByLocRef" UserSourceName="GetDataByLocRef">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        EmpRefNo, EmpId, EmpName, TotDays, WrkDays, PrsDays, LvDays, HolDay, AbsDay, LateDays, LateMin, LatePerc, EarlyDays, EarlyMin, EarlyPerc, OffLocRefNo, 
+                         LocCode, LocName, DeptRefNo, DeptCode, DeptName, SecRefNo, SecCode, SecName, DesigRefNo, DesigCode, DesigName, ShiftRefNo, ShiftCode, ShiftName
+FROM            View_Emp_Attnd_Sum
+WHERE        (OffLocRefNo = @OffLocRefNo)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="OffLocRefNo" ColumnName="OffLocRefNo" DataSourceName="DRN.dbo.View_Emp_Attnd_Sum" DataTypeServer="varchar(6)" DbType="AnsiString" Direction="Input" ParameterName="@OffLocRefNo" Precision="0" ProviderType="VarChar" Scale="0" Size="6" SourceColumn="OffLocRefNo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Emp_Attnd11TableAdapter" GeneratorDataComponentClassName="View_Emp_Attnd11TableAdapter" Name="View_Emp_Attnd11" UserDataComponentName="View_Emp_Attnd11TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AttndRefNo, EmpRefNo, EmpId, EmpName, AttndDate, ShiftRef, AttndInTime, AttndShiftInTime, AttndShiftInGrace, AttndLateMin, AttndOutTime, AttndShiftOutTime, 
+                         AttndShiftOutGrace, AttndEarlyMin, AttndTotHr, AttndTotOtMin, AttndDayVal, AttndEntryDt, AttndEntryUser, AttndUpdtDt, AttndUpdtUser, AttndExtData1, AttndExtData2, 
+                         AttndExtData3, AttndStatus, AttndFlag
+FROM            View_Emp_Attnd</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AttndRefNo" DataSetColumn="AttndRefNo" />
+              <Mapping SourceColumn="EmpRefNo" DataSetColumn="EmpRefNo" />
+              <Mapping SourceColumn="EmpId" DataSetColumn="EmpId" />
+              <Mapping SourceColumn="EmpName" DataSetColumn="EmpName" />
+              <Mapping SourceColumn="AttndDate" DataSetColumn="AttndDate" />
+              <Mapping SourceColumn="ShiftRef" DataSetColumn="ShiftRef" />
+              <Mapping SourceColumn="AttndInTime" DataSetColumn="AttndInTime" />
+              <Mapping SourceColumn="AttndShiftInTime" DataSetColumn="AttndShiftInTime" />
+              <Mapping SourceColumn="AttndShiftInGrace" DataSetColumn="AttndShiftInGrace" />
+              <Mapping SourceColumn="AttndLateMin" DataSetColumn="AttndLateMin" />
+              <Mapping SourceColumn="AttndOutTime" DataSetColumn="AttndOutTime" />
+              <Mapping SourceColumn="AttndShiftOutTime" DataSetColumn="AttndShiftOutTime" />
+              <Mapping SourceColumn="AttndShiftOutGrace" DataSetColumn="AttndShiftOutGrace" />
+              <Mapping SourceColumn="AttndEarlyMin" DataSetColumn="AttndEarlyMin" />
+              <Mapping SourceColumn="AttndTotHr" DataSetColumn="AttndTotHr" />
+              <Mapping SourceColumn="AttndTotOtMin" DataSetColumn="AttndTotOtMin" />
+              <Mapping SourceColumn="AttndDayVal" DataSetColumn="AttndDayVal" />
+              <Mapping SourceColumn="AttndEntryDt" DataSetColumn="AttndEntryDt" />
+              <Mapping SourceColumn="AttndEntryUser" DataSetColumn="AttndEntryUser" />
+              <Mapping SourceColumn="AttndUpdtDt" DataSetColumn="AttndUpdtDt" />
+              <Mapping SourceColumn="AttndUpdtUser" DataSetColumn="AttndUpdtUser" />
+              <Mapping SourceColumn="AttndExtData1" DataSetColumn="AttndExtData1" />
+              <Mapping SourceColumn="AttndExtData2" DataSetColumn="AttndExtData2" />
+              <Mapping SourceColumn="AttndExtData3" DataSetColumn="AttndExtData3" />
+              <Mapping SourceColumn="AttndStatus" DataSetColumn="AttndStatus" />
+              <Mapping SourceColumn="AttndFlag" DataSetColumn="AttndFlag" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Emp_AttndTableAdapter" GeneratorDataComponentClassName="View_Emp_AttndTableAdapter" Name="View_Emp_Attnd" UserDataComponentName="View_Emp_AttndTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="DRNConStr (Web.config)" DbObjectName="DRN.dbo.View_Emp_Attnd" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        AttndRefNo, EmpRefNo, EmpId, EmpName, AttndDate, ShiftRef, AttndInTime, AttndShiftInTime, AttndShiftInGrace, AttndLateMin, AttndOutTime, AttndShiftOutTime, 
+                         AttndShiftOutGrace, AttndEarlyMin, AttndTotHr, AttndTotOtMin, AttndDayVal, AttndEntryDt, AttndEntryUser, AttndUpdtDt, AttndUpdtUser, AttndExtData1, AttndExtData2, 
+                         AttndExtData3, AttndStatus, AttndFlag, LocCode, LocName, DeptCode, DeptName, SecCode, SecName, DesigCode, DesigName
+FROM            View_Emp_Attnd</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="AttndRefNo" DataSetColumn="AttndRefNo" />
+              <Mapping SourceColumn="EmpRefNo" DataSetColumn="EmpRefNo" />
+              <Mapping SourceColumn="EmpId" DataSetColumn="EmpId" />
+              <Mapping SourceColumn="EmpName" DataSetColumn="EmpName" />
+              <Mapping SourceColumn="AttndDate" DataSetColumn="AttndDate" />
+              <Mapping SourceColumn="ShiftRef" DataSetColumn="ShiftRef" />
+              <Mapping SourceColumn="AttndInTime" DataSetColumn="AttndInTime" />
+              <Mapping SourceColumn="AttndShiftInTime" DataSetColumn="AttndShiftInTime" />
+              <Mapping SourceColumn="AttndShiftInGrace" DataSetColumn="AttndShiftInGrace" />
+              <Mapping SourceColumn="AttndLateMin" DataSetColumn="AttndLateMin" />
+              <Mapping SourceColumn="AttndOutTime" DataSetColumn="AttndOutTime" />
+              <Mapping SourceColumn="AttndShiftOutTime" DataSetColumn="AttndShiftOutTime" />
+              <Mapping SourceColumn="AttndShiftOutGrace" DataSetColumn="AttndShiftOutGrace" />
+              <Mapping SourceColumn="AttndEarlyMin" DataSetColumn="AttndEarlyMin" />
+              <Mapping SourceColumn="AttndTotHr" DataSetColumn="AttndTotHr" />
+              <Mapping SourceColumn="AttndTotOtMin" DataSetColumn="AttndTotOtMin" />
+              <Mapping SourceColumn="AttndDayVal" DataSetColumn="AttndDayVal" />
+              <Mapping SourceColumn="AttndEntryDt" DataSetColumn="AttndEntryDt" />
+              <Mapping SourceColumn="AttndEntryUser" DataSetColumn="AttndEntryUser" />
+              <Mapping SourceColumn="AttndUpdtDt" DataSetColumn="AttndUpdtDt" />
+              <Mapping SourceColumn="AttndUpdtUser" DataSetColumn="AttndUpdtUser" />
+              <Mapping SourceColumn="AttndExtData1" DataSetColumn="AttndExtData1" />
+              <Mapping SourceColumn="AttndExtData2" DataSetColumn="AttndExtData2" />
+              <Mapping SourceColumn="AttndExtData3" DataSetColumn="AttndExtData3" />
+              <Mapping SourceColumn="AttndStatus" DataSetColumn="AttndStatus" />
+              <Mapping SourceColumn="AttndFlag" DataSetColumn="AttndFlag" />
+              <Mapping SourceColumn="LocCode" DataSetColumn="LocCode" />
+              <Mapping SourceColumn="LocName" DataSetColumn="LocName" />
+              <Mapping SourceColumn="DeptCode" DataSetColumn="DeptCode" />
+              <Mapping SourceColumn="DeptName" DataSetColumn="DeptName" />
+              <Mapping SourceColumn="SecCode" DataSetColumn="SecCode" />
+              <Mapping SourceColumn="SecName" DataSetColumn="SecName" />
+              <Mapping SourceColumn="DesigCode" DataSetColumn="DesigCode" />
+              <Mapping SourceColumn="DesigName" DataSetColumn="DesigName" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DRNDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DRNDataSet" msprop:Generator_UserDSName="DRNDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="View_Emp_Attnd_Sum" msprop:Generator_TableClassName="View_Emp_Attnd_SumDataTable" msprop:Generator_TableVarName="tableView_Emp_Attnd_Sum" msprop:Generator_TablePropName="View_Emp_Attnd_Sum" msprop:Generator_RowDeletingName="View_Emp_Attnd_SumRowDeleting" msprop:Generator_RowChangingName="View_Emp_Attnd_SumRowChanging" msprop:Generator_RowEvHandlerName="View_Emp_Attnd_SumRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Emp_Attnd_SumRowDeleted" msprop:Generator_UserTableName="View_Emp_Attnd_Sum" msprop:Generator_RowChangedName="View_Emp_Attnd_SumRowChanged" msprop:Generator_RowEvArgName="View_Emp_Attnd_SumRowChangeEvent" msprop:Generator_RowClassName="View_Emp_Attnd_SumRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EmpRefNo" msprop:Generator_ColumnVarNameInTable="columnEmpRefNo" msprop:Generator_ColumnPropNameInRow="EmpRefNo" msprop:Generator_ColumnPropNameInTable="EmpRefNoColumn" msprop:Generator_UserColumnName="EmpRefNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpId" msprop:Generator_ColumnVarNameInTable="columnEmpId" msprop:Generator_ColumnPropNameInRow="EmpId" msprop:Generator_ColumnPropNameInTable="EmpIdColumn" msprop:Generator_UserColumnName="EmpId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpName" msprop:Generator_ColumnPropNameInRow="EmpName" msprop:Generator_ColumnPropNameInTable="EmpNameColumn" msprop:Generator_UserColumnName="EmpName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TotDays" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotDays" msprop:Generator_ColumnPropNameInRow="TotDays" msprop:Generator_ColumnPropNameInTable="TotDaysColumn" msprop:Generator_UserColumnName="TotDays" type="xs:int" minOccurs="0" />
+              <xs:element name="WrkDays" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnWrkDays" msprop:Generator_ColumnPropNameInRow="WrkDays" msprop:Generator_ColumnPropNameInTable="WrkDaysColumn" msprop:Generator_UserColumnName="WrkDays" type="xs:int" minOccurs="0" />
+              <xs:element name="PrsDays" msprop:Generator_ColumnVarNameInTable="columnPrsDays" msprop:Generator_ColumnPropNameInRow="PrsDays" msprop:Generator_ColumnPropNameInTable="PrsDaysColumn" msprop:Generator_UserColumnName="PrsDays" type="xs:int" minOccurs="0" />
+              <xs:element name="LvDays" msprop:Generator_ColumnVarNameInTable="columnLvDays" msprop:Generator_ColumnPropNameInRow="LvDays" msprop:Generator_ColumnPropNameInTable="LvDaysColumn" msprop:Generator_UserColumnName="LvDays" type="xs:int" minOccurs="0" />
+              <xs:element name="HolDay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnHolDay" msprop:Generator_ColumnPropNameInRow="HolDay" msprop:Generator_ColumnPropNameInTable="HolDayColumn" msprop:Generator_UserColumnName="HolDay" type="xs:int" minOccurs="0" />
+              <xs:element name="AbsDay" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnAbsDay" msprop:Generator_ColumnPropNameInRow="AbsDay" msprop:Generator_ColumnPropNameInTable="AbsDayColumn" msprop:Generator_UserColumnName="AbsDay" type="xs:int" minOccurs="0" />
+              <xs:element name="LateDays" msprop:Generator_ColumnVarNameInTable="columnLateDays" msprop:Generator_ColumnPropNameInRow="LateDays" msprop:Generator_ColumnPropNameInTable="LateDaysColumn" msprop:Generator_UserColumnName="LateDays" type="xs:int" minOccurs="0" />
+              <xs:element name="LateMin" msprop:Generator_ColumnVarNameInTable="columnLateMin" msprop:Generator_ColumnPropNameInRow="LateMin" msprop:Generator_ColumnPropNameInTable="LateMinColumn" msprop:Generator_UserColumnName="LateMin" type="xs:int" minOccurs="0" />
+              <xs:element name="LatePerc" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnLatePerc" msprop:Generator_ColumnPropNameInRow="LatePerc" msprop:Generator_ColumnPropNameInTable="LatePercColumn" msprop:Generator_UserColumnName="LatePerc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EarlyDays" msprop:Generator_ColumnVarNameInTable="columnEarlyDays" msprop:Generator_ColumnPropNameInRow="EarlyDays" msprop:Generator_ColumnPropNameInTable="EarlyDaysColumn" msprop:Generator_UserColumnName="EarlyDays" type="xs:int" minOccurs="0" />
+              <xs:element name="EarlyMin" msprop:Generator_ColumnVarNameInTable="columnEarlyMin" msprop:Generator_ColumnPropNameInRow="EarlyMin" msprop:Generator_ColumnPropNameInTable="EarlyMinColumn" msprop:Generator_UserColumnName="EarlyMin" type="xs:int" minOccurs="0" />
+              <xs:element name="EarlyPerc" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEarlyPerc" msprop:Generator_ColumnPropNameInRow="EarlyPerc" msprop:Generator_ColumnPropNameInTable="EarlyPercColumn" msprop:Generator_UserColumnName="EarlyPerc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OffLocRefNo" msprop:Generator_ColumnVarNameInTable="columnOffLocRefNo" msprop:Generator_ColumnPropNameInRow="OffLocRefNo" msprop:Generator_ColumnPropNameInTable="OffLocRefNoColumn" msprop:Generator_UserColumnName="OffLocRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocCode" msprop:Generator_ColumnVarNameInTable="columnLocCode" msprop:Generator_ColumnPropNameInRow="LocCode" msprop:Generator_ColumnPropNameInTable="LocCodeColumn" msprop:Generator_UserColumnName="LocCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocName" msprop:Generator_ColumnVarNameInTable="columnLocName" msprop:Generator_ColumnPropNameInRow="LocName" msprop:Generator_ColumnPropNameInTable="LocNameColumn" msprop:Generator_UserColumnName="LocName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptRefNo" msprop:Generator_ColumnVarNameInTable="columnDeptRefNo" msprop:Generator_ColumnPropNameInRow="DeptRefNo" msprop:Generator_ColumnPropNameInTable="DeptRefNoColumn" msprop:Generator_UserColumnName="DeptRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptCode" msprop:Generator_ColumnVarNameInTable="columnDeptCode" msprop:Generator_ColumnPropNameInRow="DeptCode" msprop:Generator_ColumnPropNameInTable="DeptCodeColumn" msprop:Generator_UserColumnName="DeptCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptName" msprop:Generator_ColumnVarNameInTable="columnDeptName" msprop:Generator_ColumnPropNameInRow="DeptName" msprop:Generator_ColumnPropNameInTable="DeptNameColumn" msprop:Generator_UserColumnName="DeptName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecRefNo" msprop:Generator_ColumnVarNameInTable="columnSecRefNo" msprop:Generator_ColumnPropNameInRow="SecRefNo" msprop:Generator_ColumnPropNameInTable="SecRefNoColumn" msprop:Generator_UserColumnName="SecRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecCode" msprop:Generator_ColumnVarNameInTable="columnSecCode" msprop:Generator_ColumnPropNameInRow="SecCode" msprop:Generator_ColumnPropNameInTable="SecCodeColumn" msprop:Generator_UserColumnName="SecCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecName" msprop:Generator_ColumnVarNameInTable="columnSecName" msprop:Generator_ColumnPropNameInRow="SecName" msprop:Generator_ColumnPropNameInTable="SecNameColumn" msprop:Generator_UserColumnName="SecName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesigRefNo" msprop:Generator_ColumnVarNameInTable="columnDesigRefNo" msprop:Generator_ColumnPropNameInRow="DesigRefNo" msprop:Generator_ColumnPropNameInTable="DesigRefNoColumn" msprop:Generator_UserColumnName="DesigRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesigCode" msprop:Generator_ColumnVarNameInTable="columnDesigCode" msprop:Generator_ColumnPropNameInRow="DesigCode" msprop:Generator_ColumnPropNameInTable="DesigCodeColumn" msprop:Generator_UserColumnName="DesigCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesigName" msprop:Generator_ColumnVarNameInTable="columnDesigName" msprop:Generator_ColumnPropNameInRow="DesigName" msprop:Generator_ColumnPropNameInTable="DesigNameColumn" msprop:Generator_UserColumnName="DesigName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftRefNo" msprop:Generator_ColumnVarNameInTable="columnShiftRefNo" msprop:Generator_ColumnPropNameInRow="ShiftRefNo" msprop:Generator_ColumnPropNameInTable="ShiftRefNoColumn" msprop:Generator_UserColumnName="ShiftRefNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftCode" msprop:Generator_ColumnVarNameInTable="columnShiftCode" msprop:Generator_ColumnPropNameInRow="ShiftCode" msprop:Generator_ColumnPropNameInTable="ShiftCodeColumn" msprop:Generator_UserColumnName="ShiftCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShiftName" msprop:Generator_ColumnVarNameInTable="columnShiftName" msprop:Generator_ColumnPropNameInRow="ShiftName" msprop:Generator_ColumnPropNameInTable="ShiftNameColumn" msprop:Generator_UserColumnName="ShiftName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Emp_Attnd11" msprop:Generator_TableClassName="View_Emp_Attnd11DataTable" msprop:Generator_TableVarName="tableView_Emp_Attnd11" msprop:Generator_RowChangedName="View_Emp_Attnd11RowChanged" msprop:Generator_TablePropName="View_Emp_Attnd11" msprop:Generator_RowDeletingName="View_Emp_Attnd11RowDeleting" msprop:Generator_RowChangingName="View_Emp_Attnd11RowChanging" msprop:Generator_RowEvHandlerName="View_Emp_Attnd11RowChangeEventHandler" msprop:Generator_RowDeletedName="View_Emp_Attnd11RowDeleted" msprop:Generator_RowClassName="View_Emp_Attnd11Row" msprop:Generator_UserTableName="View_Emp_Attnd11" msprop:Generator_RowEvArgName="View_Emp_Attnd11RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AttndRefNo" msprop:Generator_ColumnVarNameInTable="columnAttndRefNo" msprop:Generator_ColumnPropNameInRow="AttndRefNo" msprop:Generator_ColumnPropNameInTable="AttndRefNoColumn" msprop:Generator_UserColumnName="AttndRefNo" type="xs:int" />
+              <xs:element name="EmpRefNo" msprop:Generator_ColumnVarNameInTable="columnEmpRefNo" msprop:Generator_ColumnPropNameInRow="EmpRefNo" msprop:Generator_ColumnPropNameInTable="EmpRefNoColumn" msprop:Generator_UserColumnName="EmpRefNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpId" msprop:Generator_ColumnVarNameInTable="columnEmpId" msprop:Generator_ColumnPropNameInRow="EmpId" msprop:Generator_ColumnPropNameInTable="EmpIdColumn" msprop:Generator_UserColumnName="EmpId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpName" msprop:Generator_ColumnPropNameInRow="EmpName" msprop:Generator_ColumnPropNameInTable="EmpNameColumn" msprop:Generator_UserColumnName="EmpName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndDate" msprop:Generator_ColumnVarNameInTable="columnAttndDate" msprop:Generator_ColumnPropNameInRow="AttndDate" msprop:Generator_ColumnPropNameInTable="AttndDateColumn" msprop:Generator_UserColumnName="AttndDate" type="xs:dateTime" />
+              <xs:element name="ShiftRef" msprop:Generator_ColumnVarNameInTable="columnShiftRef" msprop:Generator_ColumnPropNameInRow="ShiftRef" msprop:Generator_ColumnPropNameInTable="ShiftRefColumn" msprop:Generator_UserColumnName="ShiftRef" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndInTime" msprop:Generator_ColumnVarNameInTable="columnAttndInTime" msprop:Generator_ColumnPropNameInRow="AttndInTime" msprop:Generator_ColumnPropNameInTable="AttndInTimeColumn" msprop:Generator_UserColumnName="AttndInTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftInTime" msprop:Generator_ColumnVarNameInTable="columnAttndShiftInTime" msprop:Generator_ColumnPropNameInRow="AttndShiftInTime" msprop:Generator_ColumnPropNameInTable="AttndShiftInTimeColumn" msprop:Generator_UserColumnName="AttndShiftInTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftInGrace" msprop:Generator_ColumnVarNameInTable="columnAttndShiftInGrace" msprop:Generator_ColumnPropNameInRow="AttndShiftInGrace" msprop:Generator_ColumnPropNameInTable="AttndShiftInGraceColumn" msprop:Generator_UserColumnName="AttndShiftInGrace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndLateMin" msprop:Generator_ColumnVarNameInTable="columnAttndLateMin" msprop:Generator_ColumnPropNameInRow="AttndLateMin" msprop:Generator_ColumnPropNameInTable="AttndLateMinColumn" msprop:Generator_UserColumnName="AttndLateMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndOutTime" msprop:Generator_ColumnVarNameInTable="columnAttndOutTime" msprop:Generator_ColumnPropNameInRow="AttndOutTime" msprop:Generator_ColumnPropNameInTable="AttndOutTimeColumn" msprop:Generator_UserColumnName="AttndOutTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftOutTime" msprop:Generator_ColumnVarNameInTable="columnAttndShiftOutTime" msprop:Generator_ColumnPropNameInRow="AttndShiftOutTime" msprop:Generator_ColumnPropNameInTable="AttndShiftOutTimeColumn" msprop:Generator_UserColumnName="AttndShiftOutTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftOutGrace" msprop:Generator_ColumnVarNameInTable="columnAttndShiftOutGrace" msprop:Generator_ColumnPropNameInRow="AttndShiftOutGrace" msprop:Generator_ColumnPropNameInTable="AttndShiftOutGraceColumn" msprop:Generator_UserColumnName="AttndShiftOutGrace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndEarlyMin" msprop:Generator_ColumnVarNameInTable="columnAttndEarlyMin" msprop:Generator_ColumnPropNameInRow="AttndEarlyMin" msprop:Generator_ColumnPropNameInTable="AttndEarlyMinColumn" msprop:Generator_UserColumnName="AttndEarlyMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndTotHr" msprop:Generator_ColumnVarNameInTable="columnAttndTotHr" msprop:Generator_ColumnPropNameInRow="AttndTotHr" msprop:Generator_ColumnPropNameInTable="AttndTotHrColumn" msprop:Generator_UserColumnName="AttndTotHr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndTotOtMin" msprop:Generator_ColumnVarNameInTable="columnAttndTotOtMin" msprop:Generator_ColumnPropNameInRow="AttndTotOtMin" msprop:Generator_ColumnPropNameInTable="AttndTotOtMinColumn" msprop:Generator_UserColumnName="AttndTotOtMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndDayVal" msprop:Generator_ColumnVarNameInTable="columnAttndDayVal" msprop:Generator_ColumnPropNameInRow="AttndDayVal" msprop:Generator_ColumnPropNameInTable="AttndDayValColumn" msprop:Generator_UserColumnName="AttndDayVal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AttndEntryDt" msprop:Generator_ColumnVarNameInTable="columnAttndEntryDt" msprop:Generator_ColumnPropNameInRow="AttndEntryDt" msprop:Generator_ColumnPropNameInTable="AttndEntryDtColumn" msprop:Generator_UserColumnName="AttndEntryDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AttndEntryUser" msprop:Generator_ColumnVarNameInTable="columnAttndEntryUser" msprop:Generator_ColumnPropNameInRow="AttndEntryUser" msprop:Generator_ColumnPropNameInTable="AttndEntryUserColumn" msprop:Generator_UserColumnName="AttndEntryUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndUpdtDt" msprop:Generator_ColumnVarNameInTable="columnAttndUpdtDt" msprop:Generator_ColumnPropNameInRow="AttndUpdtDt" msprop:Generator_ColumnPropNameInTable="AttndUpdtDtColumn" msprop:Generator_UserColumnName="AttndUpdtDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AttndUpdtUser" msprop:Generator_ColumnVarNameInTable="columnAttndUpdtUser" msprop:Generator_ColumnPropNameInRow="AttndUpdtUser" msprop:Generator_ColumnPropNameInTable="AttndUpdtUserColumn" msprop:Generator_UserColumnName="AttndUpdtUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData1" msprop:Generator_ColumnVarNameInTable="columnAttndExtData1" msprop:Generator_ColumnPropNameInRow="AttndExtData1" msprop:Generator_ColumnPropNameInTable="AttndExtData1Column" msprop:Generator_UserColumnName="AttndExtData1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData2" msprop:Generator_ColumnVarNameInTable="columnAttndExtData2" msprop:Generator_ColumnPropNameInRow="AttndExtData2" msprop:Generator_ColumnPropNameInTable="AttndExtData2Column" msprop:Generator_UserColumnName="AttndExtData2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData3" msprop:Generator_ColumnVarNameInTable="columnAttndExtData3" msprop:Generator_ColumnPropNameInRow="AttndExtData3" msprop:Generator_ColumnPropNameInTable="AttndExtData3Column" msprop:Generator_UserColumnName="AttndExtData3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndStatus" msprop:Generator_ColumnVarNameInTable="columnAttndStatus" msprop:Generator_ColumnPropNameInRow="AttndStatus" msprop:Generator_ColumnPropNameInTable="AttndStatusColumn" msprop:Generator_UserColumnName="AttndStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndFlag" msprop:Generator_ColumnVarNameInTable="columnAttndFlag" msprop:Generator_ColumnPropNameInRow="AttndFlag" msprop:Generator_ColumnPropNameInTable="AttndFlagColumn" msprop:Generator_UserColumnName="AttndFlag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Emp_Attnd" msprop:Generator_TableClassName="View_Emp_AttndDataTable" msprop:Generator_TableVarName="tableView_Emp_Attnd" msprop:Generator_TablePropName="View_Emp_Attnd" msprop:Generator_RowDeletingName="View_Emp_AttndRowDeleting" msprop:Generator_RowChangingName="View_Emp_AttndRowChanging" msprop:Generator_RowEvHandlerName="View_Emp_AttndRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Emp_AttndRowDeleted" msprop:Generator_UserTableName="View_Emp_Attnd" msprop:Generator_RowChangedName="View_Emp_AttndRowChanged" msprop:Generator_RowEvArgName="View_Emp_AttndRowChangeEvent" msprop:Generator_RowClassName="View_Emp_AttndRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="AttndRefNo" msprop:Generator_ColumnVarNameInTable="columnAttndRefNo" msprop:Generator_ColumnPropNameInRow="AttndRefNo" msprop:Generator_ColumnPropNameInTable="AttndRefNoColumn" msprop:Generator_UserColumnName="AttndRefNo" type="xs:int" />
+              <xs:element name="EmpRefNo" msprop:Generator_ColumnVarNameInTable="columnEmpRefNo" msprop:Generator_ColumnPropNameInRow="EmpRefNo" msprop:Generator_ColumnPropNameInTable="EmpRefNoColumn" msprop:Generator_UserColumnName="EmpRefNo">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpId" msprop:Generator_ColumnVarNameInTable="columnEmpId" msprop:Generator_ColumnPropNameInRow="EmpId" msprop:Generator_ColumnPropNameInTable="EmpIdColumn" msprop:Generator_UserColumnName="EmpId" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="EmpName" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEmpName" msprop:Generator_ColumnPropNameInRow="EmpName" msprop:Generator_ColumnPropNameInTable="EmpNameColumn" msprop:Generator_UserColumnName="EmpName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="101" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndDate" msprop:Generator_ColumnVarNameInTable="columnAttndDate" msprop:Generator_ColumnPropNameInRow="AttndDate" msprop:Generator_ColumnPropNameInTable="AttndDateColumn" msprop:Generator_UserColumnName="AttndDate" type="xs:dateTime" />
+              <xs:element name="ShiftRef" msprop:Generator_ColumnVarNameInTable="columnShiftRef" msprop:Generator_ColumnPropNameInRow="ShiftRef" msprop:Generator_ColumnPropNameInTable="ShiftRefColumn" msprop:Generator_UserColumnName="ShiftRef" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="6" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndInTime" msprop:Generator_ColumnVarNameInTable="columnAttndInTime" msprop:Generator_ColumnPropNameInRow="AttndInTime" msprop:Generator_ColumnPropNameInTable="AttndInTimeColumn" msprop:Generator_UserColumnName="AttndInTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftInTime" msprop:Generator_ColumnVarNameInTable="columnAttndShiftInTime" msprop:Generator_ColumnPropNameInRow="AttndShiftInTime" msprop:Generator_ColumnPropNameInTable="AttndShiftInTimeColumn" msprop:Generator_UserColumnName="AttndShiftInTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftInGrace" msprop:Generator_ColumnVarNameInTable="columnAttndShiftInGrace" msprop:Generator_ColumnPropNameInRow="AttndShiftInGrace" msprop:Generator_ColumnPropNameInTable="AttndShiftInGraceColumn" msprop:Generator_UserColumnName="AttndShiftInGrace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndLateMin" msprop:Generator_ColumnVarNameInTable="columnAttndLateMin" msprop:Generator_ColumnPropNameInRow="AttndLateMin" msprop:Generator_ColumnPropNameInTable="AttndLateMinColumn" msprop:Generator_UserColumnName="AttndLateMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndOutTime" msprop:Generator_ColumnVarNameInTable="columnAttndOutTime" msprop:Generator_ColumnPropNameInRow="AttndOutTime" msprop:Generator_ColumnPropNameInTable="AttndOutTimeColumn" msprop:Generator_UserColumnName="AttndOutTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftOutTime" msprop:Generator_ColumnVarNameInTable="columnAttndShiftOutTime" msprop:Generator_ColumnPropNameInRow="AttndShiftOutTime" msprop:Generator_ColumnPropNameInTable="AttndShiftOutTimeColumn" msprop:Generator_UserColumnName="AttndShiftOutTime" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndShiftOutGrace" msprop:Generator_ColumnVarNameInTable="columnAttndShiftOutGrace" msprop:Generator_ColumnPropNameInRow="AttndShiftOutGrace" msprop:Generator_ColumnPropNameInTable="AttndShiftOutGraceColumn" msprop:Generator_UserColumnName="AttndShiftOutGrace" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndEarlyMin" msprop:Generator_ColumnVarNameInTable="columnAttndEarlyMin" msprop:Generator_ColumnPropNameInRow="AttndEarlyMin" msprop:Generator_ColumnPropNameInTable="AttndEarlyMinColumn" msprop:Generator_UserColumnName="AttndEarlyMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndTotHr" msprop:Generator_ColumnVarNameInTable="columnAttndTotHr" msprop:Generator_ColumnPropNameInRow="AttndTotHr" msprop:Generator_ColumnPropNameInTable="AttndTotHrColumn" msprop:Generator_UserColumnName="AttndTotHr" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndTotOtMin" msprop:Generator_ColumnVarNameInTable="columnAttndTotOtMin" msprop:Generator_ColumnPropNameInRow="AttndTotOtMin" msprop:Generator_ColumnPropNameInTable="AttndTotOtMinColumn" msprop:Generator_UserColumnName="AttndTotOtMin" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndDayVal" msprop:Generator_ColumnVarNameInTable="columnAttndDayVal" msprop:Generator_ColumnPropNameInRow="AttndDayVal" msprop:Generator_ColumnPropNameInTable="AttndDayValColumn" msprop:Generator_UserColumnName="AttndDayVal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="AttndEntryDt" msprop:Generator_ColumnVarNameInTable="columnAttndEntryDt" msprop:Generator_ColumnPropNameInRow="AttndEntryDt" msprop:Generator_ColumnPropNameInTable="AttndEntryDtColumn" msprop:Generator_UserColumnName="AttndEntryDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AttndEntryUser" msprop:Generator_ColumnVarNameInTable="columnAttndEntryUser" msprop:Generator_ColumnPropNameInRow="AttndEntryUser" msprop:Generator_ColumnPropNameInTable="AttndEntryUserColumn" msprop:Generator_UserColumnName="AttndEntryUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndUpdtDt" msprop:Generator_ColumnVarNameInTable="columnAttndUpdtDt" msprop:Generator_ColumnPropNameInRow="AttndUpdtDt" msprop:Generator_ColumnPropNameInTable="AttndUpdtDtColumn" msprop:Generator_UserColumnName="AttndUpdtDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="AttndUpdtUser" msprop:Generator_ColumnVarNameInTable="columnAttndUpdtUser" msprop:Generator_ColumnPropNameInRow="AttndUpdtUser" msprop:Generator_ColumnPropNameInTable="AttndUpdtUserColumn" msprop:Generator_UserColumnName="AttndUpdtUser" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData1" msprop:Generator_ColumnVarNameInTable="columnAttndExtData1" msprop:Generator_ColumnPropNameInRow="AttndExtData1" msprop:Generator_ColumnPropNameInTable="AttndExtData1Column" msprop:Generator_UserColumnName="AttndExtData1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData2" msprop:Generator_ColumnVarNameInTable="columnAttndExtData2" msprop:Generator_ColumnPropNameInRow="AttndExtData2" msprop:Generator_ColumnPropNameInTable="AttndExtData2Column" msprop:Generator_UserColumnName="AttndExtData2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndExtData3" msprop:Generator_ColumnVarNameInTable="columnAttndExtData3" msprop:Generator_ColumnPropNameInRow="AttndExtData3" msprop:Generator_ColumnPropNameInTable="AttndExtData3Column" msprop:Generator_UserColumnName="AttndExtData3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndStatus" msprop:Generator_ColumnVarNameInTable="columnAttndStatus" msprop:Generator_ColumnPropNameInRow="AttndStatus" msprop:Generator_ColumnPropNameInTable="AttndStatusColumn" msprop:Generator_UserColumnName="AttndStatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AttndFlag" msprop:Generator_ColumnVarNameInTable="columnAttndFlag" msprop:Generator_ColumnPropNameInRow="AttndFlag" msprop:Generator_ColumnPropNameInTable="AttndFlagColumn" msprop:Generator_UserColumnName="AttndFlag" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocCode" msprop:Generator_ColumnVarNameInTable="columnLocCode" msprop:Generator_ColumnPropNameInRow="LocCode" msprop:Generator_ColumnPropNameInTable="LocCodeColumn" msprop:Generator_UserColumnName="LocCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LocName" msprop:Generator_ColumnVarNameInTable="columnLocName" msprop:Generator_ColumnPropNameInRow="LocName" msprop:Generator_ColumnPropNameInTable="LocNameColumn" msprop:Generator_UserColumnName="LocName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptCode" msprop:Generator_ColumnVarNameInTable="columnDeptCode" msprop:Generator_ColumnPropNameInRow="DeptCode" msprop:Generator_ColumnPropNameInTable="DeptCodeColumn" msprop:Generator_UserColumnName="DeptCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DeptName" msprop:Generator_ColumnVarNameInTable="columnDeptName" msprop:Generator_ColumnPropNameInRow="DeptName" msprop:Generator_ColumnPropNameInTable="DeptNameColumn" msprop:Generator_UserColumnName="DeptName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecCode" msprop:Generator_ColumnVarNameInTable="columnSecCode" msprop:Generator_ColumnPropNameInRow="SecCode" msprop:Generator_ColumnPropNameInTable="SecCodeColumn" msprop:Generator_UserColumnName="SecCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SecName" msprop:Generator_ColumnVarNameInTable="columnSecName" msprop:Generator_ColumnPropNameInRow="SecName" msprop:Generator_ColumnPropNameInTable="SecNameColumn" msprop:Generator_UserColumnName="SecName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesigCode" msprop:Generator_ColumnVarNameInTable="columnDesigCode" msprop:Generator_ColumnPropNameInRow="DesigCode" msprop:Generator_ColumnPropNameInTable="DesigCodeColumn" msprop:Generator_UserColumnName="DesigCode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DesigName" msprop:Generator_ColumnVarNameInTable="columnDesigName" msprop:Generator_ColumnPropNameInRow="DesigName" msprop:Generator_ColumnPropNameInTable="DesigNameColumn" msprop:Generator_UserColumnName="DesigName" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Emp_Attnd11" />
+      <xs:field xpath="mstns:AttndRefNo" />
+    </xs:unique>
+    <xs:unique name="View_Emp_Attnd_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Emp_Attnd" />
+      <xs:field xpath="mstns:AttndRefNo" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

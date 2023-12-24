@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63ACFBC6-FB90-4102-B5EA-93A7B5A97E76}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRN_WIN_ERP</RootNamespace>
+    <AssemblyName>DRN_WIN_ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>E:\DOREEN\DrnWinErp\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>true</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>http://182.160.110.139/DRNWINERP/publish.htm/</InstallUrl>
+    <UpdateUrl>http://182.160.110.139/DRNWINERP/</UpdateUrl>
+    <MinimumRequiredVersion>1.0.0.0</MinimumRequiredVersion>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <ApplicationRevision>24</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>seven_horse.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1330C54357DBA5D276371C32BD967D533CA6FECE</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>DRN_WIN_ERP_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DRN_WEB_ERP">
+      <HintPath>..\DRN_WEB_ERP\bin\DRN_WEB_ERP.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSets\dsSysMasTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSysMasTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinAccTran.cs">
+      <DependentUpon>dsWinAccTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinAccTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinAccTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinInvMas.cs">
+      <DependentUpon>dsWinInvMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinInvMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinInvMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinInvTran.cs">
+      <DependentUpon>dsWinInvTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinInvTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinInvTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinSalesMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinSalesMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinSalesTran.cs">
+      <DependentUpon>dsWinSalesTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinSalesTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinSalesTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dsWinTransMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWinTransMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminPass.Designer.cs">
+      <DependentUpon>frmAdminPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrowser.designer.cs">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBrowserCOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBrowserCOA.designer.cs">
+      <DependentUpon>frmBrowserCOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDbConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDbConfig.Designer.cs">
+      <DependentUpon>frmDbConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLoadSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLoadSlip.Designer.cs">
+      <DependentUpon>frmLoadSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSplash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSplash.designer.cs">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\frmSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\frmSalesReport.Designer.cs">
+      <DependentUpon>frmSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\frmDeliveryChallan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\frmDeliveryChallan.designer.cs">
+      <DependentUpon>frmDeliveryChallan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modules\Sales\frmShowSalesReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modules\Sales\frmShowSalesReport.Designer.cs">
+      <DependentUpon>frmShowSalesReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\Sales\rptDelChln.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDelChln.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WinGlobalClass\clsBXLAPI.cs" />
+    <Compile Include="WinGlobalClass\clsBXLAPI_x64.cs" />
+    <Compile Include="WinGlobalClass\clsBXLAPI_x86.cs" />
+    <Compile Include="WinGlobalClass\clsDbHelper.cs" />
+    <Compile Include="WinGlobalClass\clsEncryptDecrypt.cs" />
+    <Compile Include="WinGlobalClass\clsGlobalProperties.cs" />
+    <Compile Include="WinGlobalClass\clsUpdtDbConStr.cs" />
+    <EmbeddedResource Include="frmAdminPass.resx">
+      <DependentUpon>frmAdminPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrowser.resx">
+      <DependentUpon>frmBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBrowserCOA.resx">
+      <DependentUpon>frmBrowserCOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDbConfig.resx">
+      <DependentUpon>frmDbConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLoadSlip.resx">
+      <DependentUpon>frmLoadSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSplash.resx">
+      <DependentUpon>frmSplash.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\frmSalesReport.resx">
+      <DependentUpon>frmSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\frmDeliveryChallan.resx">
+      <DependentUpon>frmDeliveryChallan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modules\Sales\frmShowSalesReport.resx">
+      <DependentUpon>frmShowSalesReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reports\Sales\rptDelChln.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChln.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="DataSets\dsSysMasTran.xsc">
+      <DependentUpon>dsSysMasTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsSysMasTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSysMasTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsSysMasTran.xss">
+      <DependentUpon>dsSysMasTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinAccTran.xsc">
+      <DependentUpon>dsWinAccTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinAccTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinAccTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinAccTran.xss">
+      <DependentUpon>dsWinAccTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinInvMas.xsc">
+      <DependentUpon>dsWinInvMas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinInvMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinInvMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinInvMas.xss">
+      <DependentUpon>dsWinInvMas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinInvTran.xsc">
+      <DependentUpon>dsWinInvTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinInvTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinInvTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinInvTran.xss">
+      <DependentUpon>dsWinInvTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinSalesMas.xsc">
+      <DependentUpon>dsWinSalesMas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinSalesMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinSalesMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinSalesMas.xss">
+      <DependentUpon>dsWinSalesMas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinSalesTran.xsc">
+      <DependentUpon>dsWinSalesTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinSalesTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinSalesTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinSalesTran.xss">
+      <DependentUpon>dsWinSalesTran.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinTransMas.xsc">
+      <DependentUpon>dsWinTransMas.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dsWinTransMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWinTransMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dsWinTransMas.xss">
+      <DependentUpon>dsWinTransMas.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\g_logo1.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven_horse.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="seven_horse.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

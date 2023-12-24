@@ -1,0 +1,3732 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F0DEE43-FC66-4D91-B689-EBD82C24FA42}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DRN_WEB_ERP</RootNamespace>
+    <AssemblyName>DRN_WEB_ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\DRN WEB ERP - 1\DRN_WEB_ERP\DAL_WEB_ERP\bin\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Viewing.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.Enterprise.Viewing.ReportSource.13.0.4003\lib\net40\CrystalDecisions.Enterprise.Viewing.ReportSource.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CommonObjectModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CommonObjectModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CommonObjectModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.CubeDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.CubeDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.CubeDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.DataDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.DataDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.DataDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportAppServer.ReportDefModel, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalReports.ReportAppServer.ReportDefModel.13.0.4003\lib\net40\CrystalDecisions.ReportAppServer.ReportDefModel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="els, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\els.dll</HintPath>
+    </Reference>
+    <Reference Include="FreeTextBox, Version=3.3.1.12354, Culture=neutral, PublicKeyToken=5962a4e684a48b87, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\system01\Desktop\monju\FreeTextBox\FreeTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="frmAttndDayRptAdm.aspx" />
+    <Content Include="frmAttndDayRptAdmOld.aspx" />
+    <Content Include="frmAttndSumRpt.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="frmAttndDayRpt.aspx" />
+    <Content Include="frmAttndSumRptAdm.aspx" />
+    <Content Include="frmDashBoard.aspx" />
+    <Content Include="frmEmpList.aspx" />
+    <Content Include="frmLogin.aspx" />
+    <Content Include="Global.asax" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmAttndDayRptAdm.aspx.cs">
+      <DependentUpon>frmAttndDayRptAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAttndDayRptAdm.aspx.designer.cs">
+      <DependentUpon>frmAttndDayRptAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttndDayRptAdmOld.aspx.cs">
+      <DependentUpon>frmAttndDayRptAdmOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAttndDayRptAdmOld.aspx.designer.cs">
+      <DependentUpon>frmAttndDayRptAdmOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttndSumRpt.aspx.cs">
+      <DependentUpon>frmAttndSumRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAttndSumRpt.aspx.designer.cs">
+      <DependentUpon>frmAttndSumRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DRNDataSet.cs">
+      <DependentUpon>DRNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DRNDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DRNDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttndDayRpt.aspx.cs">
+      <DependentUpon>frmAttndDayRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAttndDayRpt.aspx.designer.cs">
+      <DependentUpon>frmAttndDayRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAttndSumRptAdm.aspx.cs">
+      <DependentUpon>frmAttndSumRptAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmAttndSumRptAdm.aspx.designer.cs">
+      <DependentUpon>frmAttndSumRptAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmDashBoard.aspx.cs">
+      <DependentUpon>frmDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmDashBoard.aspx.designer.cs">
+      <DependentUpon>frmDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmpList.aspx.cs">
+      <DependentUpon>frmEmpList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmEmpList.aspx.designer.cs">
+      <DependentUpon>frmEmpList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.aspx.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmLogin.aspx.designer.cs">
+      <DependentUpon>frmLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalClass\clsBXLAPI.cs" />
+    <Compile Include="GlobalClass\clsBXLAPI_x64.cs" />
+    <Compile Include="GlobalClass\clsBXLAPI_x86.cs" />
+    <Compile Include="GlobalClass\clsDAO.cs" />
+    <Compile Include="GlobalClass\clsDbCon.cs" />
+    <Compile Include="GlobalClass\clsDbHelper.cs" />
+    <Compile Include="GlobalClass\clsMailHelper.cs" />
+    <Compile Include="GlobalClass\clsPrintHelper.cs" />
+    <Compile Include="GlobalClass\clsNumToText.cs" />
+    <Compile Include="GlobalClass\clsSmsHelper.cs" />
+    <Compile Include="GlobalClass\clsToolTip.cs" />
+    <Compile Include="Module\Accounts\DataSet\dsAccMas.cs">
+      <DependentUpon>dsAccMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\DataSet\dsAccMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\DataSet\dsAccTran.cs">
+      <DependentUpon>dsAccTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\DataSet\dsAccTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAccTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmAccUserPerm.aspx.cs">
+      <DependentUpon>frmAccUserPerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmAccUserPerm.aspx.designer.cs">
+      <DependentUpon>frmAccUserPerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLCoaGrp.aspx.cs">
+      <DependentUpon>frmGLCoaGrp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLCoaGrp.aspx.designer.cs">
+      <DependentUpon>frmGLCoaGrp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmSuppLedger.aspx.cs">
+      <DependentUpon>frmSuppLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmSuppLedger.aspx.designer.cs">
+      <DependentUpon>frmSuppLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmOpnBalEdit.aspx.cs">
+      <DependentUpon>frmOpnBalEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmOpnBalEdit.aspx.designer.cs">
+      <DependentUpon>frmOpnBalEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGlGrpTree.aspx.cs">
+      <DependentUpon>frmGlGrpTree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGlGrpTree.aspx.designer.cs">
+      <DependentUpon>frmGlGrpTree.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherReceive.aspx.cs">
+      <DependentUpon>frmVoucherReceive.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherReceive.aspx.designer.cs">
+      <DependentUpon>frmVoucherReceive.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherPayment.aspx.cs">
+      <DependentUpon>frmVoucherPayment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherPayment.aspx.designer.cs">
+      <DependentUpon>frmVoucherPayment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEdit.aspx.cs">
+      <DependentUpon>frmVoucherEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEdit.aspx.designer.cs">
+      <DependentUpon>frmVoucherEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherView.aspx.cs">
+      <DependentUpon>frmVoucherView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherView.aspx.designer.cs">
+      <DependentUpon>frmVoucherView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherRpt.aspx.cs">
+      <DependentUpon>frmVoucherRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherRpt.aspx.designer.cs">
+      <DependentUpon>frmVoucherRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTrialBalRpt.aspx.cs">
+      <DependentUpon>frmTrialBalRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTrialBalRpt.aspx.designer.cs">
+      <DependentUpon>frmTrialBalRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentEdit.aspx.cs">
+      <DependentUpon>frmPaymentEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentEdit.aspx.designer.cs">
+      <DependentUpon>frmPaymentEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentBank.aspx.cs">
+      <DependentUpon>frmPaymentBank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentBank.aspx.designer.cs">
+      <DependentUpon>frmPaymentBank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentCash.aspx.cs">
+      <DependentUpon>frmPaymentCash.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentCash.aspx.designer.cs">
+      <DependentUpon>frmPaymentCash.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEntryContra.aspx.cs">
+      <DependentUpon>frmVoucherEntryContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEntryContra.aspx.designer.cs">
+      <DependentUpon>frmVoucherEntryContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCreditRpt.aspx.cs">
+      <DependentUpon>frmCreditRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCreditRpt.aspx.designer.cs">
+      <DependentUpon>frmCreditRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcv.aspx.cs">
+      <DependentUpon>frmPaymentRcv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcv.aspx.designer.cs">
+      <DependentUpon>frmPaymentRcv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcvEdit.aspx.cs">
+      <DependentUpon>frmPaymentRcvEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcvEdit.aspx.designer.cs">
+      <DependentUpon>frmPaymentRcvEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmShowSalesReportAcc.aspx.cs">
+      <DependentUpon>frmShowSalesReportAcc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmShowSalesReportAcc.aspx.designer.cs">
+      <DependentUpon>frmShowSalesReportAcc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBill.aspx.cs">
+      <DependentUpon>frmTranTripBill.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBill.aspx.designer.cs">
+      <DependentUpon>frmTranTripBill.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranVoucherEntry.aspx.cs">
+      <DependentUpon>frmTranVoucherEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranVoucherEntry.aspx.designer.cs">
+      <DependentUpon>frmTranVoucherEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranPayRcv.aspx.cs">
+      <DependentUpon>frmTranPayRcv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranPayRcv.aspx.designer.cs">
+      <DependentUpon>frmTranPayRcv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBillShow.aspx.cs">
+      <DependentUpon>frmTranTripBillShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBillShow.aspx.designer.cs">
+      <DependentUpon>frmTranTripBillShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBillAppr.aspx.cs">
+      <DependentUpon>frmTranTripBillAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranTripBillAppr.aspx.designer.cs">
+      <DependentUpon>frmTranTripBillAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranPayRcv_Old.aspx.cs">
+      <DependentUpon>frmTranPayRcv_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmTranPayRcv_Old.aspx.designer.cs">
+      <DependentUpon>frmTranPayRcv_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLGrpSumRpt.aspx.cs">
+      <DependentUpon>frmGLGrpSumRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLGrpSumRpt.aspx.designer.cs">
+      <DependentUpon>frmGLGrpSumRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmAccAdj.aspx.cs">
+      <DependentUpon>frmAccAdj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmAccAdj.aspx.designer.cs">
+      <DependentUpon>frmAccAdj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcvRpt.aspx.cs">
+      <DependentUpon>frmPaymentRcvRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmPaymentRcvRpt.aspx.designer.cs">
+      <DependentUpon>frmPaymentRcvRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmShowAccReport.aspx.cs">
+      <DependentUpon>frmShowAccReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmShowAccReport.aspx.designer.cs">
+      <DependentUpon>frmShowAccReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEntry.aspx.cs">
+      <DependentUpon>frmVoucherEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmVoucherEntry.aspx.designer.cs">
+      <DependentUpon>frmVoucherEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmOpnBalEntry.aspx.cs">
+      <DependentUpon>frmOpnBalEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmOpnBalEntry.aspx.designer.cs">
+      <DependentUpon>frmOpnBalEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCustLedger.aspx.cs">
+      <DependentUpon>frmCustLedger.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCustLedger.aspx.designer.cs">
+      <DependentUpon>frmCustLedger.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLMaster.aspx.cs">
+      <DependentUpon>frmGLMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmGLMaster.aspx.designer.cs">
+      <DependentUpon>frmGLMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\wsAutoComAcc.asmx.cs">
+      <DependentUpon>wsAutoComAcc.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptTrialBalGrpSum.cs">
+      <DependentUpon>rptTrialBalGrpSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCoaGrpList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCoaGrpList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptTrialBalGrpDet.cs">
+      <DependentUpon>rptTrialBalGrpDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCreditSum.cs">
+      <DependentUpon>rptCreditSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCreditSumOld.cs">
+      <DependentUpon>rptCreditSumOld.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCollectionDet.cs">
+      <DependentUpon>rptCollectionDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCreditDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCreditDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptCustLed.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptCustLed.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptGLAccSum.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptGLAccSum.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Reports\rptVoucher.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptVoucher.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsAttnEcilFact.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHrmsAttnEcilFact.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsEmpDet.cs">
+      <DependentUpon>dsEmpDet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsEmpDet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEmpDet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsAttnEcilWalsow.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHrmsAttnEcilWalsow.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsMas.cs">
+      <DependentUpon>dsHrmsMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHrmsMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsTran.cs">
+      <DependentUpon>dsHrmsTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\DataSet\dsHrmsTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHrmsTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpRpt.aspx.cs">
+      <DependentUpon>frmEmpRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpRpt.aspx.designer.cs">
+      <DependentUpon>frmEmpRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmPromIncr.aspx.cs">
+      <DependentUpon>frmPromIncr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmPromIncr.aspx.designer.cs">
+      <DependentUpon>frmPromIncr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtndEclilWalsow.aspx.cs">
+      <DependentUpon>frmImportAtndEclilWalsow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtndEclilWalsow.aspx.designer.cs">
+      <DependentUpon>frmImportAtndEclilWalsow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtndEclilFact.aspx.cs">
+      <DependentUpon>frmImportAtndEclilFact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtndEclilFact.aspx.designer.cs">
+      <DependentUpon>frmImportAtndEclilFact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveRptAdm.aspx.cs">
+      <DependentUpon>frmEmpLeaveRptAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveRptAdm.aspx.designer.cs">
+      <DependentUpon>frmEmpLeaveRptAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpAttndRpt.aspx.cs">
+      <DependentUpon>frmEmpAttndRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpAttndRpt.aspx.designer.cs">
+      <DependentUpon>frmEmpAttndRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveAppr.aspx.cs">
+      <DependentUpon>frmEmpLeaveAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveAppr.aspx.designer.cs">
+      <DependentUpon>frmEmpLeaveAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave.aspx.cs">
+      <DependentUpon>frmEmpLeave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave.aspx.designer.cs">
+      <DependentUpon>frmEmpLeave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave_Old.aspx.cs">
+      <DependentUpon>frmEmpLeave_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave_Old.aspx.designer.cs">
+      <DependentUpon>frmEmpLeave_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave1.aspx.cs">
+      <DependentUpon>frmEmpLeave1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeave1.aspx.designer.cs">
+      <DependentUpon>frmEmpLeave1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveList.aspx.cs">
+      <DependentUpon>frmEmpLeaveList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveList.aspx.designer.cs">
+      <DependentUpon>frmEmpLeaveList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpPaySetup.aspx.cs">
+      <DependentUpon>frmEmpPaySetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpPaySetup.aspx.designer.cs">
+      <DependentUpon>frmEmpPaySetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpProfile.aspx.cs">
+      <DependentUpon>frmEmpProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpProfile.aspx.designer.cs">
+      <DependentUpon>frmEmpProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmGradeDet.aspx.cs">
+      <DependentUpon>frmGradeDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmGradeDet.aspx.designer.cs">
+      <DependentUpon>frmGradeDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmHoliday.aspx.cs">
+      <DependentUpon>frmHoliday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmHoliday.aspx.designer.cs">
+      <DependentUpon>frmHoliday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmHrmAdm.aspx.cs">
+      <DependentUpon>frmHrmAdm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmHrmAdm.aspx.designer.cs">
+      <DependentUpon>frmHrmAdm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtnd.aspx.cs">
+      <DependentUpon>frmImportAtnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmImportAtnd.aspx.designer.cs">
+      <DependentUpon>frmImportAtnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveRpt.aspx.cs">
+      <DependentUpon>frmEmpLeaveRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpLeaveRpt.aspx.designer.cs">
+      <DependentUpon>frmEmpLeaveRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmPayHead.aspx.cs">
+      <DependentUpon>frmPayHead.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmPayHead.aspx.designer.cs">
+      <DependentUpon>frmPayHead.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmLeaveMas.aspx.cs">
+      <DependentUpon>frmLeaveMas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmLeaveMas.aspx.designer.cs">
+      <DependentUpon>frmLeaveMas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmSalaryCalc.aspx.cs">
+      <DependentUpon>frmSalaryCalc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmSalaryCalc.aspx.designer.cs">
+      <DependentUpon>frmSalaryCalc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmShift.aspx.cs">
+      <DependentUpon>frmShift.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmShift.aspx.designer.cs">
+      <DependentUpon>frmShift.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmDesig.aspx.cs">
+      <DependentUpon>frmDesig.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmDesig.aspx.designer.cs">
+      <DependentUpon>frmDesig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmSec.aspx.cs">
+      <DependentUpon>frmSec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmSec.aspx.designer.cs">
+      <DependentUpon>frmSec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmDept.aspx.cs">
+      <DependentUpon>frmDept.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmDept.aspx.designer.cs">
+      <DependentUpon>frmDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpAttnd.aspx.cs">
+      <DependentUpon>frmEmpAttnd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpAttnd.aspx.designer.cs">
+      <DependentUpon>frmEmpAttnd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpMas.aspx.cs">
+      <DependentUpon>frmEmpMas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmEmpMas.aspx.designer.cs">
+      <DependentUpon>frmEmpMas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmOffLoc.aspx.cs">
+      <DependentUpon>frmOffLoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmOffLoc.aspx.designer.cs">
+      <DependentUpon>frmOffLoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmShowHrmsReport.aspx.cs">
+      <DependentUpon>frmShowHrmsReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\frmShowHrmsReport.aspx.designer.cs">
+      <DependentUpon>frmShowHrmsReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Forms\wsAutoComHrms.asmx.cs">
+      <DependentUpon>wsAutoComHrms.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Reports\rptEmpProfile.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptEmpProfile.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Reports\rptHrmsEpmDayAttn.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptHrmsEpmDayAttn.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Reports\SubReportExperience.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportExperience.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Reports\SubReportQualification2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SubReportQualification.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\HRMS\Tools\getEmpNid.ashx.cs">
+      <DependentUpon>getEmpNid.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Tools\getEmpPic.ashx.cs">
+      <DependentUpon>getEmpPic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\HRMS\Tools\getEmpSig.ashx.cs">
+      <DependentUpon>getEmpSig.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\DataSet\dsInvMas.cs">
+      <DependentUpon>dsInvMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\DataSet\dsInvMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\DataSet\dsInvTran.cs">
+      <DependentUpon>dsInvTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\DataSet\dsInvTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsInvTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptIssue.aspx.cs">
+      <DependentUpon>frmInvRptIssue.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptIssue.aspx.designer.cs">
+      <DependentUpon>frmInvRptIssue.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptMrr.aspx.cs">
+      <DependentUpon>frmInvRptMrr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptMrr.aspx.designer.cs">
+      <DependentUpon>frmInvRptMrr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStkAdj.aspx.cs">
+      <DependentUpon>frmStkAdj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStkAdj.aspx.designer.cs">
+      <DependentUpon>frmStkAdj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreLocPerm.aspx.cs">
+      <DependentUpon>frmStoreLocPerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreLocPerm.aspx.designer.cs">
+      <DependentUpon>frmStoreLocPerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqApprDDL.aspx.cs">
+      <DependentUpon>frmStoreReqApprDDL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqApprDDL.aspx.designer.cs">
+      <DependentUpon>frmStoreReqApprDDL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemSpecEntry.aspx.cs">
+      <DependentUpon>frmItemSpecEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemSpecEntry.aspx.designer.cs">
+      <DependentUpon>frmItemSpecEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStockTransfer.aspx.cs">
+      <DependentUpon>frmStockTransfer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStockTransfer.aspx.designer.cs">
+      <DependentUpon>frmStockTransfer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemReturn.aspx.cs">
+      <DependentUpon>frmItemReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemReturn.aspx.designer.cs">
+      <DependentUpon>frmItemReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmShowIFrameRpt.aspx.cs">
+      <DependentUpon>frmShowIFrameRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmShowIFrameRpt.aspx.designer.cs">
+      <DependentUpon>frmShowIFrameRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvItemTranRpt.aspx.cs">
+      <DependentUpon>frmInvItemTranRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvItemTranRpt.aspx.designer.cs">
+      <DependentUpon>frmInvItemTranRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptPro.aspx.cs">
+      <DependentUpon>frmInvRptPro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvRptPro.aspx.designer.cs">
+      <DependentUpon>frmInvRptPro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvStockStat.aspx.cs">
+      <DependentUpon>frmInvStockStat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmInvStockStat.aspx.designer.cs">
+      <DependentUpon>frmInvStockStat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmShowInvReport.aspx.cs">
+      <DependentUpon>frmShowInvReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmShowInvReport.aspx.designer.cs">
+      <DependentUpon>frmShowInvReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqInq.aspx.cs">
+      <DependentUpon>frmStoreReqInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqInq.aspx.designer.cs">
+      <DependentUpon>frmStoreReqInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqIssu.aspx.cs">
+      <DependentUpon>frmStoreReqIssu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqIssu.aspx.designer.cs">
+      <DependentUpon>frmStoreReqIssu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqAppr.aspx.cs">
+      <DependentUpon>frmStoreReqAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReqAppr.aspx.designer.cs">
+      <DependentUpon>frmStoreReqAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemEntry.aspx.cs">
+      <DependentUpon>frmItemEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmItemEntry.aspx.designer.cs">
+      <DependentUpon>frmItemEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmOpnBal.aspx.cs">
+      <DependentUpon>frmOpnBal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmOpnBal.aspx.designer.cs">
+      <DependentUpon>frmOpnBal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmIssueDirect.aspx.cs">
+      <DependentUpon>frmIssueDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmIssueDirect.aspx.designer.cs">
+      <DependentUpon>frmIssueDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmMrrDirect.aspx.cs">
+      <DependentUpon>frmMrrDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmMrrDirect.aspx.designer.cs">
+      <DependentUpon>frmMrrDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReq.aspx.cs">
+      <DependentUpon>frmStoreReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmStoreReq.aspx.designer.cs">
+      <DependentUpon>frmStoreReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\wsAutoCompInv.asmx.cs">
+      <DependentUpon>wsAutoCompInv.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmMrr.aspx.cs">
+      <DependentUpon>frmMrr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Forms\frmMrr.aspx.designer.cs">
+      <DependentUpon>frmMrr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeSumValMax.cs">
+      <DependentUpon>rptInvIsuItemTypeSumValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeDetValMax.cs">
+      <DependentUpon>rptInvIsuItemTypeDetValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemSumValMax.cs">
+      <DependentUpon>rptInvIsuItemSumValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemDetValMax.cs">
+      <DependentUpon>rptInvIsuItemDetValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadSumValMax.cs">
+      <DependentUpon>rptInvIsuHeadSumValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadDetValMax.cs">
+      <DependentUpon>rptInvIsuHeadDetValMax.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeSumVal.cs">
+      <DependentUpon>rptInvIsuItemTypeSumVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeDetVal.cs">
+      <DependentUpon>rptInvIsuItemTypeDetVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeSum.cs">
+      <DependentUpon>rptInvIsuItemTypeSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemTypeDet.cs">
+      <DependentUpon>rptInvIsuItemTypeDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadSumVal.cs">
+      <DependentUpon>rptInvIsuHeadSumVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadSum.cs">
+      <DependentUpon>rptInvIsuHeadSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadDetVal.cs">
+      <DependentUpon>rptInvIsuHeadDetVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuHeadDet.cs">
+      <DependentUpon>rptInvIsuHeadDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemSumVal.cs">
+      <DependentUpon>rptInvIsuItemSumVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemSum.cs">
+      <DependentUpon>rptInvIsuItemSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemDet.cs">
+      <DependentUpon>rptInvIsuItemDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuItemDetVal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvIsuItemDetVal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrItemSum.cs">
+      <DependentUpon>rptInvMrrItemSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrItemSumVal.cs">
+      <DependentUpon>rptInvMrrItemSumVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrSupSum.cs">
+      <DependentUpon>rptInvMrrSupSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrSupSumVal.cs">
+      <DependentUpon>rptInvMrrSupSumVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrSupDet.cs">
+      <DependentUpon>rptInvMrrSupDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrItemDet.cs">
+      <DependentUpon>rptInvMrrItemDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrItemDetVal.cs">
+      <DependentUpon>rptInvMrrItemDetVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrSupDetVal.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvMrrSupDetVal.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvTranListSum.cs">
+      <DependentUpon>rptInvTranListSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvStkTran.cs">
+      <DependentUpon>rptInvStkTran.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrProSum.cs">
+      <DependentUpon>rptInvMrrProSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuProSum.cs">
+      <DependentUpon>rptInvIsuProSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvIsuProDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvIsuProDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrrProDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvMrrProDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvTranList.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptInvTranList.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Inventory\Reports\rptInvMrr.cs">
+      <DependentUpon>rptInvMrr.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\IO\DataSet\dsIO.cs">
+      <DependentUpon>dsIO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\DataSet\dsIO.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsIO.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOAdjApp.aspx.cs">
+      <DependentUpon>frmIOAdjApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOAdjApp.aspx.designer.cs">
+      <DependentUpon>frmIOAdjApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOAdj.aspx.cs">
+      <DependentUpon>frmIOAdj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOAdj.aspx.designer.cs">
+      <DependentUpon>frmIOAdj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOLimit.aspx.cs">
+      <DependentUpon>frmIOLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOLimit.aspx.designer.cs">
+      <DependentUpon>frmIOLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOReq.aspx.cs">
+      <DependentUpon>frmIOReq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOReq.aspx.designer.cs">
+      <DependentUpon>frmIOReq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOReqApp.aspx.cs">
+      <DependentUpon>frmIOReqApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOReqApp.aspx.designer.cs">
+      <DependentUpon>frmIOReqApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIORpt.aspx.cs">
+      <DependentUpon>frmIORpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIORpt.aspx.designer.cs">
+      <DependentUpon>frmIORpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOSetup.aspx.cs">
+      <DependentUpon>frmIOSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\IO\Forms\frmIOSetup.aspx.designer.cs">
+      <DependentUpon>frmIOSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\DataSets\dsProcMas.cs">
+      <DependentUpon>dsProcMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\DataSets\dsProcMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProcMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\DataSets\dsProcTran.cs">
+      <DependentUpon>dsProcTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\DataSets\dsProcTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProcTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsPrint_Old.aspx.cs">
+      <DependentUpon>frmCsPrint_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsPrint_Old.aspx.designer.cs">
+      <DependentUpon>frmCsPrint_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierQtn.aspx.cs">
+      <DependentUpon>frmSupplierQtn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierQtn.aspx.designer.cs">
+      <DependentUpon>frmSupplierQtn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprSplit.aspx.cs">
+      <DependentUpon>frmMprSplit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprSplit.aspx.designer.cs">
+      <DependentUpon>frmMprSplit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsApprRevice.aspx.cs">
+      <DependentUpon>frmCsApprRevice.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsApprRevice.aspx.designer.cs">
+      <DependentUpon>frmCsApprRevice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoPrintSPO.aspx.cs">
+      <DependentUpon>frmPoPrintSPO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoPrintSPO.aspx.designer.cs">
+      <DependentUpon>frmPoPrintSPO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprPendList.aspx.cs">
+      <DependentUpon>frmMprPendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprPendList.aspx.designer.cs">
+      <DependentUpon>frmMprPendList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsQtnDet.aspx.cs">
+      <DependentUpon>frmCsQtnDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsQtnDet.aspx.designer.cs">
+      <DependentUpon>frmCsQtnDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprInq.aspx.cs">
+      <DependentUpon>frmMprInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprInq.aspx.designer.cs">
+      <DependentUpon>frmMprInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsInq.aspx.cs">
+      <DependentUpon>frmCsInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsInq.aspx.designer.cs">
+      <DependentUpon>frmCsInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsPrint.aspx.cs">
+      <DependentUpon>frmCsPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsPrint.aspx.designer.cs">
+      <DependentUpon>frmCsPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsAppr.aspx.cs">
+      <DependentUpon>frmCsAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsAppr.aspx.designer.cs">
+      <DependentUpon>frmCsAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsEntry.aspx.cs">
+      <DependentUpon>frmCsEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmCsEntry.aspx.designer.cs">
+      <DependentUpon>frmCsEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoReport.aspx.cs">
+      <DependentUpon>frmPoReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoReport.aspx.designer.cs">
+      <DependentUpon>frmPoReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnPendMpr.aspx.cs">
+      <DependentUpon>frmQtnPendMpr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnPendMpr.aspx.designer.cs">
+      <DependentUpon>frmQtnPendMpr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoDirect.aspx.cs">
+      <DependentUpon>frmPoDirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoDirect.aspx.designer.cs">
+      <DependentUpon>frmPoDirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsPrint.aspx.cs">
+      <DependentUpon>frmQuotCsPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsPrint.aspx.designer.cs">
+      <DependentUpon>frmQuotCsPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInquery.aspx.cs">
+      <DependentUpon>frmPoInquery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInquery.aspx.designer.cs">
+      <DependentUpon>frmPoInquery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsInq.aspx.cs">
+      <DependentUpon>frmQuotCsInq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsInq.aspx.designer.cs">
+      <DependentUpon>frmQuotCsInq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoPrint.aspx.cs">
+      <DependentUpon>frmPoPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoPrint.aspx.designer.cs">
+      <DependentUpon>frmPoPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoSend.aspx.cs">
+      <DependentUpon>frmPoSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoSend.aspx.designer.cs">
+      <DependentUpon>frmPoSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoView.aspx.cs">
+      <DependentUpon>frmPoView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoView.aspx.designer.cs">
+      <DependentUpon>frmPoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmShowProcReport.aspx.cs">
+      <DependentUpon>frmShowProcReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmShowProcReport.aspx.designer.cs">
+      <DependentUpon>frmShowProcReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillRpt.aspx.cs">
+      <DependentUpon>frmSupplierBillRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillRpt.aspx.designer.cs">
+      <DependentUpon>frmSupplierBillRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillView.aspx.cs">
+      <DependentUpon>frmSupplierBillView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillView.aspx.designer.cs">
+      <DependentUpon>frmSupplierBillView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPay.aspx.cs">
+      <DependentUpon>frmSupplierPay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPay.aspx.designer.cs">
+      <DependentUpon>frmSupplierPay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotPoAppr.aspx.cs">
+      <DependentUpon>frmQuotPoAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotPoAppr.aspx.designer.cs">
+      <DependentUpon>frmQuotPoAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillEntry.aspx.cs">
+      <DependentUpon>frmSupplierBillEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierBillEntry.aspx.designer.cs">
+      <DependentUpon>frmSupplierBillEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPayAdv.aspx.cs">
+      <DependentUpon>frmSupplierPayAdv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPayAdv.aspx.designer.cs">
+      <DependentUpon>frmSupplierPayAdv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnEntry.aspx.cs">
+      <DependentUpon>frmQtnEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnEntry.aspx.designer.cs">
+      <DependentUpon>frmQtnEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInit.aspx.cs">
+      <DependentUpon>frmPoInit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInit.aspx.designer.cs">
+      <DependentUpon>frmPoInit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInitFinal.aspx.cs">
+      <DependentUpon>frmPoInitFinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmPoInitFinal.aspx.designer.cs">
+      <DependentUpon>frmPoInitFinal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMpr.aspx.cs">
+      <DependentUpon>frmMpr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMpr.aspx.designer.cs">
+      <DependentUpon>frmMpr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprAppr.aspx.cs">
+      <DependentUpon>frmMprAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmMprAppr.aspx.designer.cs">
+      <DependentUpon>frmMprAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnTaCEdit.aspx.cs">
+      <DependentUpon>frmQtnTaCEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnTaCEdit.aspx.designer.cs">
+      <DependentUpon>frmQtnTaCEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnValEdit.aspx.cs">
+      <DependentUpon>frmQtnValEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnValEdit.aspx.designer.cs">
+      <DependentUpon>frmQtnValEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsAppr.aspx.cs">
+      <DependentUpon>frmQuotCsAppr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotCsAppr.aspx.designer.cs">
+      <DependentUpon>frmQuotCsAppr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotEnt_Old.aspx.cs">
+      <DependentUpon>frmQuotEnt_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotEnt_Old.aspx.designer.cs">
+      <DependentUpon>frmQuotEnt_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotNew_Old.aspx.cs">
+      <DependentUpon>frmQuotNew_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQuotNew_Old.aspx.designer.cs">
+      <DependentUpon>frmQuotNew_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnEntryCs.aspx.cs">
+      <DependentUpon>frmQtnEntryCs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmQtnEntryCs.aspx.designer.cs">
+      <DependentUpon>frmQtnEntryCs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPayOld.aspx.cs">
+      <DependentUpon>frmSupplierPayOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplierPayOld.aspx.designer.cs">
+      <DependentUpon>frmSupplierPayOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplier.aspx.cs">
+      <DependentUpon>frmSupplier.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmSupplier.aspx.designer.cs">
+      <DependentUpon>frmSupplier.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmTaCMas.aspx.cs">
+      <DependentUpon>frmTaCMas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\frmTaCMas.aspx.designer.cs">
+      <DependentUpon>frmTaCMas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\ctlQtnCom.ascx.cs">
+      <DependentUpon>ctlQtnCom.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\ctlQtnCom.ascx.designer.cs">
+      <DependentUpon>ctlQtnCom.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\CtlQtnEntry.ascx.cs">
+      <DependentUpon>CtlQtnEntry.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\CtlQtnEntry.ascx.designer.cs">
+      <DependentUpon>CtlQtnEntry.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\CtlQtnView.ascx.cs">
+      <DependentUpon>CtlQtnView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\UserControl\CtlQtnView.ascx.designer.cs">
+      <DependentUpon>CtlQtnView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Procurement\Forms\wsAutoComProc.asmx.cs">
+      <DependentUpon>wsAutoComProc.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptInvMrr.cs">
+      <DependentUpon>rptInvMrr.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumItmTypeRcv.cs">
+      <DependentUpon>rptProcPoSumItmTypeRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetItmTypeRcv.cs">
+      <DependentUpon>rptProcPoDetItmTypeRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumItmType.cs">
+      <DependentUpon>rptProcPoSumItmType.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetItmType.cs">
+      <DependentUpon>rptProcPoDetItmType.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumItmRcv.cs">
+      <DependentUpon>rptProcPoSumItmRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetItmRcv.cs">
+      <DependentUpon>rptProcPoDetItmRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumSupRcv.cs">
+      <DependentUpon>rptProcPoSumSupRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetSupRcv.cs">
+      <DependentUpon>rptProcPoDetSupRcv.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumItm.cs">
+      <DependentUpon>rptProcPoSumItm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoSumSup.cs">
+      <DependentUpon>rptProcPoSumSup.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetItm.cs">
+      <DependentUpon>rptProcPoDetItm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcMpr.cs">
+      <DependentUpon>rptProcMpr.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcCs.cs">
+      <DependentUpon>rptProcCs.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Procurement\Reports\rptProcPoDetSup.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProcPoDetSup.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Production\DataSet\dsProdMas.cs">
+      <DependentUpon>dsProdMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\DataSet\dsProdMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProdMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRptDet.aspx.cs">
+      <DependentUpon>frmProdRptDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRptDet.aspx.designer.cs">
+      <DependentUpon>frmProdRptDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdEntry.aspx.cs">
+      <DependentUpon>frmProdEntry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdEntry.aspx.designer.cs">
+      <DependentUpon>frmProdEntry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdEntryOld.aspx.cs">
+      <DependentUpon>frmProdEntryOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdEntryOld.aspx.designer.cs">
+      <DependentUpon>frmProdEntryOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdItem.aspx.cs">
+      <DependentUpon>frmProdItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdItem.aspx.designer.cs">
+      <DependentUpon>frmProdItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRecipe.aspx.cs">
+      <DependentUpon>frmProdRecipe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRecipe.aspx.designer.cs">
+      <DependentUpon>frmProdRecipe.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRpt.aspx.cs">
+      <DependentUpon>frmProdRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmProdRpt.aspx.designer.cs">
+      <DependentUpon>frmProdRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmShowProdReport.aspx.cs">
+      <DependentUpon>frmShowProdReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Production\Forms\frmShowProdReport.aspx.designer.cs">
+      <DependentUpon>frmShowProdReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Production\Reports\rptProdRpt.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptProdRpt.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\DataSet\dsSalesMas.cs">
+      <DependentUpon>dsSalesMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\DataSet\dsSalesMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\DataSet\dsSalesTran.cs">
+      <DependentUpon>dsSalesTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\DataSet\dsSalesTran.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSalesTran.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCustCrLimit.aspx.cs">
+      <DependentUpon>frmCustCrLimit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Accounts\Forms\frmCustCrLimit.aspx.designer.cs">
+      <DependentUpon>frmCustCrLimit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanRptGhat.aspx.cs">
+      <DependentUpon>frmDeliveryChallanRptGhat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanRptGhat.aspx.designer.cs">
+      <DependentUpon>frmDeliveryChallanRptGhat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSmsConfigure.aspx.cs">
+      <DependentUpon>frmSmsConfigure.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSmsConfigure.aspx.designer.cs">
+      <DependentUpon>frmSmsConfigure.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomerListByMpo.aspx.cs">
+      <DependentUpon>frmCustomerListByMpo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomerListByMpo.aspx.designer.cs">
+      <DependentUpon>frmCustomerListByMpo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptMpo.aspx.cs">
+      <DependentUpon>frmSalesOrderRptMpo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptMpo.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderRptMpo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptWing.aspx.cs">
+      <DependentUpon>frmSalesOrderRptWing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptWing.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderRptWing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomerList.aspx.cs">
+      <DependentUpon>frmCustomerList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomerList.aspx.designer.cs">
+      <DependentUpon>frmCustomerList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustPriceList.aspx.cs">
+      <DependentUpon>frmCustPriceList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustPriceList.aspx.designer.cs">
+      <DependentUpon>frmCustPriceList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanPrintStatus.aspx.cs">
+      <DependentUpon>frmDeliveryChallanPrintStatus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanPrintStatus.aspx.designer.cs">
+      <DependentUpon>frmDeliveryChallanPrintStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesCrSecurity.aspx.cs">
+      <DependentUpon>frmSalesCrSecurity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesCrSecurity.aspx.designer.cs">
+      <DependentUpon>frmSalesCrSecurity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDeliveryChallanTruckEdit.aspx.cs">
+      <DependentUpon>frmSalesDeliveryChallanTruckEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDeliveryChallanTruckEdit.aspx.designer.cs">
+      <DependentUpon>frmSalesDeliveryChallanTruckEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturnRpt.aspx.cs">
+      <DependentUpon>frmSalesReturnRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturnRpt.aspx.designer.cs">
+      <DependentUpon>frmSalesReturnRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTargetCust.aspx.cs">
+      <DependentUpon>frmSalesTargetCust.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTargetCust.aspx.designer.cs">
+      <DependentUpon>frmSalesTargetCust.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptCustLed.cs">
+      <DependentUpon>rptCustLed.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnRePrint.cs">
+      <DependentUpon>rptDelChlnRePrint.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListCustVal.cs">
+      <DependentUpon>rptDelChlnListCustVal.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmViewNodePerm.aspx.cs">
+      <DependentUpon>frmViewNodePerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmViewNodePerm.aspx.designer.cs">
+      <DependentUpon>frmViewNodePerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsStaffMas.cs">
+      <DependentUpon>dsStaffMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsStaffMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsStaffMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsTransDet.cs">
+      <DependentUpon>dsTransDet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsTransDet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransDet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipReport.aspx.cs">
+      <DependentUpon>frmLoadSlipReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipReport.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipVatPendList.aspx.cs">
+      <DependentUpon>frmLoadSlipVatPendList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipVatPendList.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipVatPendList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmUploadWeighbridgeData.aspx.cs">
+      <DependentUpon>frmUploadWeighbridgeData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmUploadWeighbridgeData.aspx.designer.cs">
+      <DependentUpon>frmUploadWeighbridgeData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmVehicleDocDet.aspx.cs">
+      <DependentUpon>frmVehicleDocDet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmVehicleDocDet.aspx.designer.cs">
+      <DependentUpon>frmVehicleDocDet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmStaffMas.aspx.cs">
+      <DependentUpon>frmStaffMas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmStaffMas.aspx.designer.cs">
+      <DependentUpon>frmStaffMas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmSalesTC.aspx.cs">
+      <DependentUpon>frmSalesTC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmSalesTC.aspx.designer.cs">
+      <DependentUpon>frmSalesTC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDataBrowser.aspx.cs">
+      <DependentUpon>frmSalesDataBrowser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDataBrowser.aspx.designer.cs">
+      <DependentUpon>frmSalesDataBrowser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmSalesTC_Old.aspx.cs">
+      <DependentUpon>frmSalesTC_Old.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmSalesTC_Old.aspx.designer.cs">
+      <DependentUpon>frmSalesTC_Old.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTCPend.aspx.cs">
+      <DependentUpon>frmSalesTCPend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTCPend.aspx.designer.cs">
+      <DependentUpon>frmSalesTCPend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderPrint.aspx.cs">
+      <DependentUpon>frmSalesOrderPrint.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderPrint.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderPrint.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOEdit.aspx.cs">
+      <DependentUpon>frmSalesDOEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOEdit.aspx.designer.cs">
+      <DependentUpon>frmSalesDOEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDORetailPend.aspx.cs">
+      <DependentUpon>frmSalesDORetailPend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDORetailPend.aspx.designer.cs">
+      <DependentUpon>frmSalesDORetailPend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptDsm.aspx.cs">
+      <DependentUpon>frmSalesOrderRptDsm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRptDsm.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderRptDsm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderStatusRpt.aspx.cs">
+      <DependentUpon>frmSalesOrderStatusRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderStatusRpt.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderStatusRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTargetSp.aspx.cs">
+      <DependentUpon>frmSalesTargetSp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTargetSp.aspx.designer.cs">
+      <DependentUpon>frmSalesTargetSp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustRetailer.aspx.cs">
+      <DependentUpon>frmCustRetailer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustRetailer.aspx.designer.cs">
+      <DependentUpon>frmCustRetailer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOCancel.aspx.cs">
+      <DependentUpon>frmSalesDOCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOCancel.aspx.designer.cs">
+      <DependentUpon>frmSalesDOCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRpt.aspx.cs">
+      <DependentUpon>frmSalesOrderRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderRpt.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanRpt.aspx.cs">
+      <DependentUpon>frmDeliveryChallanRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallanRpt.aspx.designer.cs">
+      <DependentUpon>frmDeliveryChallanRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOPend.aspx.cs">
+      <DependentUpon>frmSalesDOPend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDOPend.aspx.designer.cs">
+      <DependentUpon>frmSalesDOPend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDORpt.aspx.cs">
+      <DependentUpon>frmSalesDORpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDORpt.aspx.designer.cs">
+      <DependentUpon>frmSalesDORpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesPerson.aspx.cs">
+      <DependentUpon>frmSalesPerson.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesPerson.aspx.designer.cs">
+      <DependentUpon>frmSalesPerson.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturnApp.aspx.cs">
+      <DependentUpon>frmSalesReturnApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturnApp.aspx.designer.cs">
+      <DependentUpon>frmSalesReturnApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturn.aspx.cs">
+      <DependentUpon>frmSalesReturn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesReturn.aspx.designer.cs">
+      <DependentUpon>frmSalesReturn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustPriceSetup.aspx.cs">
+      <DependentUpon>frmCustPriceSetup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustPriceSetup.aspx.designer.cs">
+      <DependentUpon>frmCustPriceSetup.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderApp.aspx.cs">
+      <DependentUpon>frmSalesOrderApp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderApp.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderApp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrder.aspx.cs">
+      <DependentUpon>frmSalesOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrder.aspx.designer.cs">
+      <DependentUpon>frmSalesOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomer.aspx.cs">
+      <DependentUpon>frmCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmCustomer.aspx.designer.cs">
+      <DependentUpon>frmCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallan.aspx.cs">
+      <DependentUpon>frmDeliveryChallan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmDeliveryChallan.aspx.designer.cs">
+      <DependentUpon>frmDeliveryChallan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDO.aspx.cs">
+      <DependentUpon>frmSalesDO.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDO.aspx.designer.cs">
+      <DependentUpon>frmSalesDO.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDsm.aspx.cs">
+      <DependentUpon>frmSalesDsm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesDsm.aspx.designer.cs">
+      <DependentUpon>frmSalesDsm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesSumRpt.aspx.cs">
+      <DependentUpon>frmSalesSumRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesSumRpt.aspx.designer.cs">
+      <DependentUpon>frmSalesSumRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTarget.aspx.cs">
+      <DependentUpon>frmSalesTarget.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesTarget.aspx.designer.cs">
+      <DependentUpon>frmSalesTarget.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSendSms.aspx.cs">
+      <DependentUpon>frmSendSms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSendSms.aspx.designer.cs">
+      <DependentUpon>frmSendSms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmShowSalesReport.aspx.cs">
+      <DependentUpon>frmShowSalesReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmShowSalesReport.aspx.designer.cs">
+      <DependentUpon>frmShowSalesReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderCancel.aspx.cs">
+      <DependentUpon>frmSalesOrderCancel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\frmSalesOrderCancel.aspx.designer.cs">
+      <DependentUpon>frmSalesOrderCancel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Sales\Forms\wsAutoComSales.asmx.cs">
+      <DependentUpon>wsAutoComSales.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListDate.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDelChlnListDate.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByPendDoSum.cs">
+      <DependentUpon>rptSalesOrdByPendDoSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdBySpSum.cs">
+      <DependentUpon>rptSalesOrdBySpSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByItemSum.cs">
+      <DependentUpon>rptSalesOrdByItemSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByDsmSum.cs">
+      <DependentUpon>rptSalesOrdByDsmSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByCustSum.cs">
+      <DependentUpon>rptSalesOrdByCustSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByDsm1.cs">
+      <DependentUpon>rptSalesOrdByDsm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListCustSum.cs">
+      <DependentUpon>rptDelChlnListCustSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendSpSum.cs">
+      <DependentUpon>rptDelOrdPendSpSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendSpDet.cs">
+      <DependentUpon>rptDelOrdPendSpDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendDsmSum.cs">
+      <DependentUpon>rptDelOrdPendDsmSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendDsmDet.cs">
+      <DependentUpon>rptDelOrdPendDsmDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendCustSum.cs">
+      <DependentUpon>rptDelOrdPendCustSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdSpSum.cs">
+      <DependentUpon>rptDelOrdSpSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdDsmDet.cs">
+      <DependentUpon>rptDelOrdDsmDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdDsmSum.cs">
+      <DependentUpon>rptDelOrdDsmSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdSpDet.cs">
+      <DependentUpon>rptDelOrdSpDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdCustSum.cs">
+      <DependentUpon>rptDelOrdCustSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChln_New.cs">
+      <DependentUpon>rptDelChln_New.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesDistThanaSumThana.cs">
+      <DependentUpon>rptSalesDistThanaSumThana.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesDistThanaSumDist.cs">
+      <DependentUpon>rptSalesDistThanaSumDist.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesDistThanaDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesDistThanaDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptTrgtVsSalesSp.cs">
+      <DependentUpon>rptTrgtVsSalesSp.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListSpSum.cs">
+      <DependentUpon>rptDelChlnListSpSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListSpDet.cs">
+      <DependentUpon>rptDelChlnListSpDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDsmWiseCollectionSum.cs">
+      <DependentUpon>rptDsmWiseCollectionSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListDsmSum.cs">
+      <DependentUpon>rptDelChlnListDsmSum.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListDsm.cs">
+      <DependentUpon>rptDelChlnListDsm.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDsmTrgtVsSales_Collect.cs">
+      <DependentUpon>rptDsmTrgtVsSales_Collect.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDsmTrgtVsSales.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDsmTrgtVsSales.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDsmWiseCollectionDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDsmWiseCollectionDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByPendDo.cs">
+      <DependentUpon>rptSalesOrdByPendDo.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByItem.cs">
+      <DependentUpon>rptSalesOrdByItem.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdBySP.cs">
+      <DependentUpon>rptSalesOrdBySP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListSP.cs">
+      <DependentUpon>rptDelChlnListSP.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListItem.cs">
+      <DependentUpon>rptDelChlnListItem.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnListCust.cs">
+      <DependentUpon>rptDelChlnListCust.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdPendCustDet.cs">
+      <DependentUpon>rptDelOrdPendCustDet.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChlnList.cs">
+      <DependentUpon>rptDelChlnList.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelChln.cs">
+      <DependentUpon>rptDelChln.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptDelOrdCustDet.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptDelOrdCustDet.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrd.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesOrd.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Sales\Reports\rptSalesOrdByCust.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptSalesOrdByCust.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\DataSet\dsApp.cs">
+      <DependentUpon>dsApp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\DataSet\dsApp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsApp.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\DataSet\dsSys.cs">
+      <DependentUpon>dsSys.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\DataSet\dsSys.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsSys.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmCompany.aspx.cs">
+      <DependentUpon>frmCompany.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmCompany.aspx.designer.cs">
+      <DependentUpon>frmCompany.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmCreateUser.aspx.cs">
+      <DependentUpon>frmCreateUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmCreateUser.aspx.designer.cs">
+      <DependentUpon>frmCreateUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmModule.aspx.cs">
+      <DependentUpon>frmModule.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmModule.aspx.designer.cs">
+      <DependentUpon>frmModule.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmNode.aspx.cs">
+      <DependentUpon>frmNode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmNode.aspx.designer.cs">
+      <DependentUpon>frmNode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmUserPerm.aspx.cs">
+      <DependentUpon>frmUserPerm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\frmUserPerm.aspx.designer.cs">
+      <DependentUpon>frmUserPerm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\SYS\Forms\wsAutoComSys.asmx.cs">
+      <DependentUpon>wsAutoComSys.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\DataSets\dsTemManage.cs">
+      <DependentUpon>dsTemManage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\DataSets\dsTemManage.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTemManage.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTourRpt.aspx.cs">
+      <DependentUpon>frmAccTourRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTourRpt.aspx.designer.cs">
+      <DependentUpon>frmAccTourRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTourPlan.aspx.cs">
+      <DependentUpon>frmAccTourPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTourPlan.aspx.designer.cs">
+      <DependentUpon>frmAccTourPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTour.aspx.cs">
+      <DependentUpon>frmAccTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmAccTour.aspx.designer.cs">
+      <DependentUpon>frmAccTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTour.aspx.cs">
+      <DependentUpon>frmEngTour.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTour.aspx.designer.cs">
+      <DependentUpon>frmEngTour.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTourPlan.aspx.cs">
+      <DependentUpon>frmEngTourPlan.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTourPlan.aspx.designer.cs">
+      <DependentUpon>frmEngTourPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTourRpt.aspx.cs">
+      <DependentUpon>frmEngTourRpt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\TeamManagement\Forms\frmEngTourRpt.aspx.designer.cs">
+      <DependentUpon>frmEngTourRpt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsTransMas.cs">
+      <DependentUpon>dsTransMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\DataSet\dsTransMas.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTransMas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipAccUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipAccUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipAccUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipAccUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipDispatchUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipDispatchUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipDispatchUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipDispatchUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipTallyUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipTallyUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipTallyUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipTallyUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipVatUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipVatUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipVatUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipVatUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipWgtScaleUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipWgtScaleUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipWgtScaleUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipWgtScaleUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipDoUpdt.aspx.cs">
+      <DependentUpon>frmLoadSlipDoUpdt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipDoUpdt.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipDoUpdt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlip.aspx.cs">
+      <DependentUpon>frmLoadSlip.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlip.aspx.designer.cs">
+      <DependentUpon>frmLoadSlip.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipUpdateOld.aspx.cs">
+      <DependentUpon>frmLoadSlipUpdateOld.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmLoadSlipUpdateOld.aspx.designer.cs">
+      <DependentUpon>frmLoadSlipUpdateOld.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmTransLocMas.aspx.cs">
+      <DependentUpon>frmTransLocMas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmTransLocMas.aspx.designer.cs">
+      <DependentUpon>frmTransLocMas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmVehicleMaster.aspx.cs">
+      <DependentUpon>frmVehicleMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmVehicleMaster.aspx.designer.cs">
+      <DependentUpon>frmVehicleMaster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmWeighbridgeDataReport.aspx.cs">
+      <DependentUpon>frmWeighbridgeDataReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\frmWeighbridgeDataReport.aspx.designer.cs">
+      <DependentUpon>frmWeighbridgeDataReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Forms\wsAutoCompleteTransport.asmx.cs">
+      <DependentUpon>wsAutoCompleteTransport.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Reports\rptLoadSlip.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rptLoadSlip.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Module\Transport\Tools\getStaffNid.ashx.cs">
+      <DependentUpon>getStaffNid.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Tools\getStaffPic.ashx.cs">
+      <DependentUpon>getStaffPic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Tools\getStaffDL.ashx.cs">
+      <DependentUpon>getStaffDL.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Transport\Tools\getVslPic.ashx.cs">
+      <DependentUpon>getVslPic.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\bd.com.mobireach.user\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Module\Accounts\Tools\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Image\about-512.png" />
+    <Content Include="Image\accept-icon.png" />
+    <Content Include="Image\add.png" />
+    <Content Include="Image\Add2.png" />
+    <Content Include="Image\Add3.png" />
+    <Content Include="Image\ajax-loader-circle-black.gif" />
+    <Content Include="Image\ajax-loader-circle-blue-wait.gif" />
+    <Content Include="Image\ajax-loader-circle-blue.gif" />
+    <Content Include="Image\approve.jpg" />
+    <Content Include="Image\Back.png" />
+    <Content Include="Image\calendar.png" />
+    <Content Include="Image\collapse.jpg" />
+    <Content Include="Image\DAL_128.ico" />
+    <Content Include="Image\Delete.png" />
+    <Content Include="Image\DoreenLogo.png" />
+    <Content Include="Image\Doreen_Grp.gif" />
+    <Content Include="Image\drn_grp.ico" />
+    <Content Include="Image\Edit.png" />
+    <Content Include="Image\expand.jpg" />
+    <Content Include="Image\find.png" />
+    <Content Include="Image\First.jpg" />
+    <Content Include="Image\forum_old.gif" />
+    <Content Include="Image\green_bg_Tab.gif" />
+    <Content Include="Image\green_left_tab.gif" />
+    <Content Include="Image\green_right_Tab.gif" />
+    <Content Include="Image\group_arrow_bottom.gif" />
+    <Content Include="Image\group_arrow_top.gif" />
+    <Content Include="Image\Help.jpg" />
+    <Content Include="Image\Last.jpg" />
+    <Content Include="Image\loading.gif" />
+    <Content Include="Image\LoadingScroll.gif" />
+    <Content Include="Image\Load_Slip_Barcode.png" />
+    <Content Include="Image\LodingWait.gif" />
+    <Content Include="Image\Mail.gif" />
+    <Content Include="Image\Minus.gif" />
+    <Content Include="Image\Next.jpg" />
+    <Content Include="Image\NoImage.gif" />
+    <Content Include="Image\Plus.gif" />
+    <Content Include="Image\Previous.jpg" />
+    <Content Include="Image\Print.gif" />
+    <Content Include="Image\Refresh.png" />
+    <Content Include="Image\Save.png" />
+    <Content Include="jScript\jquery-1.8.3.min.js" />
+    <Content Include="Module\Accounts\Forms\frmAccUserPerm.aspx" />
+    <Content Include="Module\Accounts\Forms\frmGLCoaGrp.aspx" />
+    <Content Include="Module\Accounts\Forms\frmSuppLedger.aspx" />
+    <Content Include="Module\Accounts\Forms\frmOpnBalEdit.aspx" />
+    <Content Include="Module\Accounts\Forms\frmGlGrpTree.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherReceive.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherPayment.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherEdit.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherView.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherRpt.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTrialBalRpt.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentEdit.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentBank.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentCash.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherEntryContra.aspx" />
+    <Content Include="Module\Accounts\Forms\frmCreditRpt.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentRcv.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentRcvEdit.aspx" />
+    <Content Include="Module\Accounts\Forms\frmShowSalesReportAcc.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranTripBill.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranVoucherEntry.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranPayRcv.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranTripBillShow.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranTripBillAppr.aspx" />
+    <Content Include="Module\Accounts\Forms\frmTranPayRcv_Old.aspx" />
+    <Content Include="Module\Accounts\Forms\frmGLGrpSumRpt.aspx" />
+    <Content Include="Module\Accounts\Forms\frmAccAdj.aspx" />
+    <Content Include="Module\Accounts\Forms\frmPaymentRcvRpt.aspx" />
+    <Content Include="Module\Accounts\Forms\frmShowAccReport.aspx" />
+    <Content Include="Module\Accounts\Forms\frmVoucherEntry.aspx" />
+    <Content Include="Module\Accounts\Forms\frmOpnBalEntry.aspx" />
+    <Content Include="Module\Accounts\Forms\frmCustLedger.aspx" />
+    <Content Include="Module\Accounts\Forms\frmGLMaster.aspx" />
+    <Content Include="Module\Accounts\Forms\wsAutoComAcc.asmx" />
+    <Content Include="Module\HRMS\Forms\frmEmpRpt.aspx" />
+    <Content Include="Module\HRMS\Forms\frmPromIncr.aspx" />
+    <Content Include="Module\HRMS\Forms\frmImportAtndEclilWalsow.aspx" />
+    <Content Include="Module\HRMS\Forms\frmImportAtndEclilFact.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeaveRptAdm.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpAttndRpt.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeaveAppr.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeave.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeave_Old.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeave1.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeaveList.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpPaySetup.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpProfile.aspx" />
+    <Content Include="Module\HRMS\Forms\frmGradeDet.aspx" />
+    <Content Include="Module\HRMS\Forms\frmHoliday.aspx" />
+    <Content Include="Module\HRMS\Forms\frmHrmAdm.aspx" />
+    <Content Include="Module\HRMS\Forms\frmImportAtnd.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpLeaveRpt.aspx" />
+    <Content Include="Module\HRMS\Forms\frmPayHead.aspx" />
+    <Content Include="Module\HRMS\Forms\frmLeaveMas.aspx" />
+    <Content Include="Module\HRMS\Forms\frmSalaryCalc.aspx" />
+    <Content Include="Module\HRMS\Forms\frmShift.aspx" />
+    <Content Include="Module\HRMS\Forms\frmDesig.aspx" />
+    <Content Include="Module\HRMS\Forms\frmSec.aspx" />
+    <Content Include="Module\HRMS\Forms\frmDept.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpAttnd.aspx" />
+    <Content Include="Module\HRMS\Forms\frmEmpMas.aspx" />
+    <Content Include="Module\HRMS\Forms\frmOffLoc.aspx" />
+    <Content Include="Module\HRMS\Forms\frmShowHrmsReport.aspx" />
+    <Content Include="Module\HRMS\Forms\green_bg_Tab.gif" />
+    <Content Include="Module\HRMS\Forms\green_left_tab.gif" />
+    <Content Include="Module\HRMS\Forms\green_right_Tab.gif" />
+    <Content Include="Module\HRMS\Forms\wsAutoComHrms.asmx" />
+    <Content Include="Module\Inventory\Forms\frmInvRptIssue.aspx" />
+    <Content Include="Module\Inventory\Forms\frmInvRptMrr.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStkAdj.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreLocPerm.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreReqApprDDL.aspx" />
+    <Content Include="Module\Inventory\Forms\frmItemSpecEntry.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStockTransfer.aspx" />
+    <Content Include="Module\Inventory\Forms\frmItemReturn.aspx" />
+    <Content Include="Module\Inventory\Forms\frmShowIFrameRpt.aspx" />
+    <Content Include="Module\Inventory\Forms\frmInvItemTranRpt.aspx" />
+    <Content Include="Module\Inventory\Forms\frmInvRptPro.aspx" />
+    <Content Include="Module\Inventory\Forms\frmInvStockStat.aspx" />
+    <Content Include="Module\Inventory\Forms\frmShowInvReport.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreReqInq.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreReqIssu.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreReqAppr.aspx" />
+    <Content Include="Module\Inventory\Forms\frmItemEntry.aspx" />
+    <Content Include="Module\Inventory\Forms\frmOpnBal.aspx" />
+    <Content Include="Module\Inventory\Forms\frmIssueDirect.aspx" />
+    <Content Include="Module\Inventory\Forms\frmMrrDirect.aspx" />
+    <Content Include="Module\Inventory\Forms\frmStoreReq.aspx" />
+    <Content Include="Module\Inventory\Forms\wsAutoCompInv.asmx" />
+    <Content Include="Module\Inventory\Forms\frmMrr.aspx" />
+    <Content Include="Module\IO\Forms\frmIOAdjApp.aspx" />
+    <Content Include="Module\IO\Forms\frmIOAdj.aspx" />
+    <Content Include="Module\IO\Forms\frmIOLimit.aspx" />
+    <Content Include="Module\IO\Forms\frmIOReq.aspx" />
+    <Content Include="Module\IO\Forms\frmIOReqApp.aspx" />
+    <Content Include="Module\IO\Forms\frmIORpt.aspx" />
+    <Content Include="Module\IO\Forms\frmIOSetup.aspx" />
+    <Content Include="Module\Accounts\Forms\frmCustCrLimit.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsPrint_Old.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierQtn.aspx" />
+    <Content Include="Module\Procurement\Forms\frmMprSplit.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsApprRevice.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoPrintSPO.aspx" />
+    <Content Include="Module\Procurement\Forms\frmMprPendList.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsQtnDet.aspx" />
+    <Content Include="Module\Procurement\Forms\frmMprInq.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsInq.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsPrint.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsAppr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmCsEntry.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoReport.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQtnPendMpr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoDirect.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotCsPrint.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoInquery.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotCsInq.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoPrint.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoSend.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoView.aspx" />
+    <Content Include="Module\Procurement\Forms\frmShowProcReport.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierBillRpt.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierBillView.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierPay.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotPoAppr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierBillEntry.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierPayAdv.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQtnEntry.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoInit.aspx" />
+    <Content Include="Module\Procurement\Forms\frmPoInitFinal.aspx" />
+    <Content Include="Module\Procurement\Forms\frmMpr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmMprAppr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQtnTaCEdit.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQtnValEdit.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotCsAppr.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotEnt_Old.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQuotNew_Old.aspx" />
+    <Content Include="Module\Procurement\Forms\frmQtnEntryCs.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplierPayOld.aspx" />
+    <Content Include="Module\Procurement\Forms\frmSupplier.aspx" />
+    <Content Include="Module\Procurement\Forms\frmTaCMas.aspx" />
+    <Content Include="Module\Procurement\Forms\tooltip_files\tool.gif" />
+    <Content Include="Module\Procurement\Forms\tooltip_files\tooltip.js" />
+    <Content Include="Module\Procurement\Forms\UserControl\ctlQtnCom.ascx" />
+    <Content Include="Module\Procurement\Forms\UserControl\CtlQtnEntry.ascx" />
+    <Content Include="Module\Procurement\Forms\UserControl\CtlQtnView.ascx" />
+    <Content Include="Module\Procurement\Forms\wsAutoComProc.asmx" />
+    <Content Include="Module\Production\Forms\frmProdRptDet.aspx" />
+    <Content Include="Module\Production\Forms\frmProdEntry.aspx" />
+    <Content Include="Module\Production\Forms\frmProdEntryOld.aspx" />
+    <Content Include="Module\Production\Forms\frmProdItem.aspx" />
+    <Content Include="Module\Production\Forms\frmProdRecipe.aspx" />
+    <Content Include="Module\Production\Forms\frmProdRpt.aspx" />
+    <Content Include="Module\Production\Forms\frmShowProdReport.aspx" />
+    <Content Include="Module\Sales\Forms\frmDeliveryChallanRptGhat.aspx" />
+    <Content Include="Module\Sales\Forms\frmSmsConfigure.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustomerListByMpo.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderRptMpo.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderRptWing.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustomerList.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustPriceList.aspx" />
+    <Content Include="Module\Sales\Forms\frmDeliveryChallanPrintStatus.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesCrSecurity.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDeliveryChallanTruckEdit.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesReturnRpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesTargetCust.aspx" />
+    <Content Include="Module\SYS\Forms\frmViewNodePerm.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipReport.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipVatPendList.aspx" />
+    <Content Include="Module\Transport\Forms\frmUploadWeighbridgeData.aspx" />
+    <Content Include="Module\Transport\Forms\frmVehicleDocDet.aspx" />
+    <Content Include="Module\Transport\Forms\frmStaffMas.aspx" />
+    <Content Include="Module\Transport\Forms\frmSalesTC.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDataBrowser.aspx" />
+    <Content Include="Module\Transport\Forms\frmSalesTC_Old.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesTCPend.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderPrint.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDOEdit.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDORetailPend.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderRptDsm.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderStatusRpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesTargetSp.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustRetailer.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDOCancel.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderRpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmDeliveryChallanRpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDOPend.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDORpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesPerson.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesReturnApp.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesReturn.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustPriceSetup.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderApp.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrder.aspx" />
+    <Content Include="Module\Sales\Forms\frmCustomer.aspx" />
+    <Content Include="Module\Sales\Forms\frmDeliveryChallan.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDO.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesDsm.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesSumRpt.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesTarget.aspx" />
+    <Content Include="Module\Sales\Forms\frmSendSms.aspx" />
+    <Content Include="Module\Sales\Forms\frmShowSalesReport.aspx" />
+    <Content Include="Module\Sales\Forms\frmSalesOrderCancel.aspx" />
+    <Content Include="Module\Sales\Forms\WebForm1.aspx" />
+    <Content Include="Module\Sales\Forms\wsAutoComSales.asmx" />
+    <Content Include="Module\SYS\Forms\frmCompany.aspx" />
+    <Content Include="Module\SYS\Forms\frmCreateUser.aspx" />
+    <Content Include="Module\SYS\Forms\frmModule.aspx" />
+    <Content Include="Module\SYS\Forms\frmNode.aspx" />
+    <Content Include="Module\SYS\Forms\frmUserPerm.aspx" />
+    <Content Include="Module\SYS\Forms\wsAutoComSys.asmx" />
+    <Content Include="Module\TeamManagement\Forms\frmAccTourRpt.aspx" />
+    <Content Include="Module\TeamManagement\Forms\frmAccTourPlan.aspx" />
+    <Content Include="Module\TeamManagement\Forms\frmAccTour.aspx" />
+    <Content Include="Module\TeamManagement\Forms\frmEngTour.aspx" />
+    <Content Include="Module\TeamManagement\Forms\frmEngTourPlan.aspx" />
+    <Content Include="Module\TeamManagement\Forms\frmEngTourRpt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipAccUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipDispatchUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipTallyUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipVatUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipWgtScaleUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipDoUpdt.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlip.aspx" />
+    <Content Include="Module\Transport\Forms\frmLoadSlipUpdateOld.aspx" />
+    <Content Include="Module\Transport\Forms\frmTransLocMas.aspx" />
+    <Content Include="Module\Transport\Forms\frmVehicleMaster.aspx" />
+    <Content Include="Module\Transport\Forms\frmWeighbridgeDataReport.aspx" />
+    <Content Include="Module\Transport\Forms\green_bg_Tab.gif" />
+    <Content Include="Module\Transport\Forms\green_left_tab.gif" />
+    <Content Include="Module\Transport\Forms\green_right_Tab.gif" />
+    <Content Include="Module\Transport\Forms\wsAutoCompleteTransport.asmx" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Styles\StyleSheet.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web_S_Old.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web_S.config" />
+    <None Include="DRNDataSet.xsc">
+      <DependentUpon>DRNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DRNDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DRNDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DRNDataSet.xss">
+      <DependentUpon>DRNDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccMas.xsc">
+      <DependentUpon>dsAccMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccMas.xss">
+      <DependentUpon>dsAccMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccTran.xsc">
+      <DependentUpon>dsAccTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAccTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Accounts\DataSet\dsAccTran.xss">
+      <DependentUpon>dsAccTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilFact.xsc">
+      <DependentUpon>dsHrmsAttnEcilFact.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilFact.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHrmsAttnEcilFact.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilFact.xss">
+      <DependentUpon>dsHrmsAttnEcilFact.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsEmpDet.xsc">
+      <DependentUpon>dsEmpDet.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsEmpDet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEmpDet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsEmpDet.xss">
+      <DependentUpon>dsEmpDet.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilWalsow.xsc">
+      <DependentUpon>dsHrmsAttnEcilWalsow.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilWalsow.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHrmsAttnEcilWalsow.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsAttnEcilWalsow.xss">
+      <DependentUpon>dsHrmsAttnEcilWalsow.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsMas.xsc">
+      <DependentUpon>dsHrmsMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHrmsMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsMas.xss">
+      <DependentUpon>dsHrmsMas.xsd</DependentUpon>
+    </None>
+    <Content Include="Module\HRMS\Tools\getEmpPic.ashx" />
+    <Content Include="Module\HRMS\Tools\getEmpSig.ashx" />
+    <Content Include="Module\HRMS\Tools\getEmpNid.ashx" />
+    <None Include="Module\HRMS\DataSet\dsHrmsTran.xsc">
+      <DependentUpon>dsHrmsTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHrmsTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\HRMS\DataSet\dsHrmsTran.xss">
+      <DependentUpon>dsHrmsTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvMas.xsc">
+      <DependentUpon>dsInvMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvMas.xss">
+      <DependentUpon>dsInvMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvTran.xsc">
+      <DependentUpon>dsInvTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsInvTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Inventory\DataSet\dsInvTran.xss">
+      <DependentUpon>dsInvTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\IO\DataSet\dsIO.xsc">
+      <DependentUpon>dsIO.xsd</DependentUpon>
+    </None>
+    <None Include="Module\IO\DataSet\dsIO.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsIO.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\IO\DataSet\dsIO.xss">
+      <DependentUpon>dsIO.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcMas.xsc">
+      <DependentUpon>dsProcMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProcMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcMas.xss">
+      <DependentUpon>dsProcMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcTran.xsc">
+      <DependentUpon>dsProcTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProcTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Procurement\DataSets\dsProcTran.xss">
+      <DependentUpon>dsProcTran.xsd</DependentUpon>
+    </None>
+    <Content Include="Module\Procurement\Forms\tooltip_files\ToolTipTemplate.config" />
+    <None Include="Module\Production\DataSet\dsProdMas.xsc">
+      <DependentUpon>dsProdMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Production\DataSet\dsProdMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProdMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Production\DataSet\dsProdMas.xss">
+      <DependentUpon>dsProdMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesMas.xsc">
+      <DependentUpon>dsSalesMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesMas.xss">
+      <DependentUpon>dsSalesMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesTran.xsc">
+      <DependentUpon>dsSalesTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesTran.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSalesTran.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Sales\DataSet\dsSalesTran.xss">
+      <DependentUpon>dsSalesTran.xsd</DependentUpon>
+    </None>
+    <None Include="Module\SYS\DataSet\dsApp.xsc">
+      <DependentUpon>dsApp.xsd</DependentUpon>
+    </None>
+    <None Include="Module\SYS\DataSet\dsApp.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsApp.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\SYS\DataSet\dsApp.xss">
+      <DependentUpon>dsApp.xsd</DependentUpon>
+    </None>
+    <None Include="Module\SYS\DataSet\dsSys.xsc">
+      <DependentUpon>dsSys.xsd</DependentUpon>
+    </None>
+    <None Include="Module\SYS\DataSet\dsSys.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsSys.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\SYS\DataSet\dsSys.xss">
+      <DependentUpon>dsSys.xsd</DependentUpon>
+    </None>
+    <None Include="Module\TeamManagement\DataSets\dsTemManage.xsc">
+      <DependentUpon>dsTemManage.xsd</DependentUpon>
+    </None>
+    <None Include="Module\TeamManagement\DataSets\dsTemManage.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTemManage.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\TeamManagement\DataSets\dsTemManage.xss">
+      <DependentUpon>dsTemManage.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsStaffMas.xsc">
+      <DependentUpon>dsStaffMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsStaffMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsStaffMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Transport\DataSet\dsStaffMas.xss">
+      <DependentUpon>dsStaffMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransDet.xsc">
+      <DependentUpon>dsTransDet.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransDet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransDet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransDet.xss">
+      <DependentUpon>dsTransDet.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransMas.xsc">
+      <DependentUpon>dsTransMas.xsd</DependentUpon>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransMas.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTransMas.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Module\Transport\DataSet\dsTransMas.xss">
+      <DependentUpon>dsTransMas.xsd</DependentUpon>
+    </None>
+    <Content Include="Module\Transport\Tools\getStaffNid.ashx" />
+    <Content Include="Module\Transport\Tools\getStaffPic.ashx" />
+    <Content Include="Module\Transport\Tools\getStaffDL.ashx" />
+    <Content Include="Module\Transport\Tools\getVslPic.ashx" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\bd.com.mobireach.user\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Web References\bd.com.mobireach.user\ServiceClass.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\bd.com.mobireach.user\ServiceClassArray.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\bd.com.mobireach.user\SmsController.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AttndDayRpt.rdlc" />
+    <EmbeddedResource Include="AttndDayRpt1.rdlc" />
+    <EmbeddedResource Include="AttndSumRpt.rdlc" />
+    <EmbeddedResource Include="empList.rdlc" />
+    <EmbeddedResource Include="Module\Accounts\Reports\rptTrialBalGrpSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTrialBalGrpSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCoaGrpList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCoaGrpList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptTrialBalGrpDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTrialBalGrpDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCreditSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCreditSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCreditSumOld.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCreditSumOld.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCollectionDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCollectionDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCreditDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCreditDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptCustLed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCustLed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptGLAccSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptGLAccSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Accounts\Reports\rptVoucher.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptVoucher.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\HRMS\Reports\rptEmpProfile.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptEmpProfile.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\HRMS\Reports\rptHrmsEpmDayAttn.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptHrmsEpmDayAttn.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\HRMS\Reports\SubReportExperience.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportExperience.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\HRMS\Reports\SubReportQualification.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>SubReportQualification2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeSumValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeSumValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeDetValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeDetValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemSumValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemSumValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemDetValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemDetValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadSumValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadSumValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadDetValMax.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadDetValMax.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeSumVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeSumVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeDetVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeDetVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemTypeDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemTypeDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadSumVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadSumVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadDetVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadDetVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuHeadDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuHeadDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemSumVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemSumVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuItemDetVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuItemDetVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrItemSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrItemSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrItemSumVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrItemSumVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrSupSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrSupSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrSupSumVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrSupSumVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrSupDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrSupDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrItemDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrItemDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrItemDetVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrItemDetVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrSupDetVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrSupDetVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvTranListSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvTranListSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvStkTran.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvStkTran.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrProSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrProSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuProSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuProSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvIsuProDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvIsuProDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrrProDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrrProDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvTranList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvTranList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Inventory\Reports\rptInvMrr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptInvMrr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptInvMrr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumItmTypeRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumItmTypeRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetItmTypeRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetItmTypeRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumItmType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumItmType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetItmType.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetItmType.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumItmRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumItmRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetItmRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetItmRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumSupRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumSupRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetSupRcv.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetSupRcv.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumItm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumItm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoSumSup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoSumSup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetItm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetItm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcMpr.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcMpr.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcCs.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcCs.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Procurement\Reports\rptProcPoDetSup.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProcPoDetSup.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Production\Reports\rptProdRpt.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptProdRpt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptCustLed.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptCustLed.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnRePrint.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnRePrint.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListCustVal.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListCustVal.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListDate.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListDate.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByPendDoSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByPendDoSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdBySpSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdBySpSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByItemSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByItemSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByDsmSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByDsmSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByCustSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByCustSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByDsm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByDsm1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListCustSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListCustSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendSpSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendSpSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendSpDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendSpDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendDsmSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendDsmSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendDsmDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendDsmDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendCustSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendCustSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdSpSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdSpSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdDsmDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdDsmDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdDsmSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdDsmSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdSpDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdSpDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdCustSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdCustSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChln_New.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChln_New.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesDistThanaSumThana.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesDistThanaSumThana.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesDistThanaSumDist.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesDistThanaSumDist.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesDistThanaDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesDistThanaDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptTrgtVsSalesSp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptTrgtVsSalesSp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListSpSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListSpSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListSpDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListSpDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDsmWiseCollectionSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDsmWiseCollectionSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListDsmSum.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListDsmSum.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListDsm.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListDsm.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDsmTrgtVsSales_Collect.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDsmTrgtVsSales_Collect.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDsmTrgtVsSales.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDsmTrgtVsSales.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDsmWiseCollectionDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDsmWiseCollectionDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByPendDo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByPendDo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdBySP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdBySP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListSP.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListSP.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListItem.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListItem.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnListCust.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnListCust.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdPendCustDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdPendCustDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChlnList.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChlnList.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelChln.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelChln.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptDelOrdCustDet.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptDelOrdCustDet.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrd.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrd.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Sales\Reports\rptSalesOrdByCust.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptSalesOrdByCust.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Module\Transport\Reports\rptLoadSlip.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rptLoadSlip.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>6</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="https://user.mobireach.com.bd/index.php%3fr=sms/service">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\bd.com.mobireach.user\</RelPath>
+      <UpdateFromURL>https://user.mobireach.com.bd/index.php%3fr=sms/service</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>Settings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DRN_WEB_ERP_bd_com_mobireach_user_SmsControllerService</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DRN_WIN_ERP\DRN_WIN_ERP.csproj">
+      <Project>{63acfbc6-fb90-4102-b5ea-93a7b5a97e76}</Project>
+      <Name>DRN_WIN_ERP</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50261</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
